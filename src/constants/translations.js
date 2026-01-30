@@ -27,7 +27,7 @@ export const translations = {
                 title_royalty: "Royalty",
                 subtitle: "\"Curating timeless weddings with elegance, emotion, and grandeur.\"",
                 cta_plan: "Plan My Wedding",
-                cta_portfolio: "View Our Portfolio",
+                cta_portfolio: "View Our Services",
                 scroll: "Scroll"
             },
             philosophy: {
