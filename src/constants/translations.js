@@ -18,7 +18,7 @@ export const translations = {
             email_title: "Email Us",
             call_title: "Call or Fax",
             contact_title: "Contact Us",
-            design_by: "Design and Developed by"
+            design_by: "Managed and Powered by"
         },
         home: {
             hero: {
@@ -123,7 +123,61 @@ export const translations = {
                 styling: {
                     title: "Bridal Styling",
                     desc: "The spotlight is yours. Our celebrity makeup artists and stylists ensure you look radiant and feel confident. We offer trials and personalized consultations to create a look that complements your attire and personality."
-                }
+                },
+                budget: {
+  title: "Budget Management",
+  desc: "Luxury with clarity. We meticulously plan and track your wedding budget, ensuring every rupee is optimized without compromising on elegance, quality, or your vision."
+},
+vendor: {
+  title: "Vendor Management",
+  desc: "One vision, one seamless team. From florists to performers, we coordinate with trusted vendors, manage negotiations, timelines, and deliverables—so you don’t have to."
+},
+invites: {
+  title: "Wedding Invitations",
+  desc: "First impressions set the tone. From royal scroll invites to modern digital designs, we curate invitations that reflect your story, culture, and celebration style."
+},
+menuPlanning: {
+  title: "Wedding Menu Planning",
+  desc: "Thoughtfully curated menus for every palate. We design event-wise menus that balance tradition, innovation, dietary preferences, and unforgettable flavors."
+},
+rituals: {
+  title: "Traditional Ceremonies",
+  desc: "Honoring rituals with grace and precision. From Mehendi to Vidaai, we ensure every traditional ceremony is executed with authenticity, respect, and flawless coordination."
+},
+coordination: {
+  title: "On-the-Day Coordination",
+  desc: "Be present. We’ll handle the rest. Our on-ground team manages schedules, vendors, guests, and last-minute changes so your day flows effortlessly."
+},
+shopping: {
+  title: "Personal Wedding Shopping",
+  desc: "Curated luxury, tailored to you. From bridal trousseau to jewelry and gifting, our experts guide you through every purchase with taste and intention."
+},
+entertainment: {
+  title: "Entertainment & Performances",
+  desc: "Moments that mesmerize. From folk artists and live bands to celebrity DJs and curated performances, we create experiences your guests will remember."
+},
+timeline: {
+  title: "Event Timeline Planning",
+  desc: "Perfect timing creates perfect moments. We craft detailed wedding timelines ensuring smooth transitions, punctual rituals, and stress-free celebrations."
+},
+proposal: {
+  title: "Proposal Planning",
+  desc: "Because forever deserves a grand beginning. From intimate setups to cinematic surprises, we design proposals that feel personal, magical, and unforgettable."
+},
+transport: {
+  title: "Transportation & Logistics",
+  desc: "Arrive in style, always on time. From luxury cars to guest transfers, we manage transportation logistics with precision and comfort."
+},
+destination: {
+  title: "Luxury Destination Weddings",
+  desc: "Celebrate love, anywhere in the world. We specialize in curating opulent destination weddings, managing travel, venues, logistics, and guest experiences end-to-end."
+},
+prewedding: {
+  title: "Pre-Wedding Photography",
+  desc: "A story before the vows. From royal palaces to intimate escapes, we conceptualize and execute pre-wedding shoots that reflect your journey and chemistry."
+}
+
+                
             },
             inquire: "Inquire About",
             cta: {
@@ -198,7 +252,7 @@ export const translations = {
                 submit: "Send Inquiry"
             },
             info: {
-                title: "Get In Touch",
+                title: "MB Events & Catering Services",
                 phone: "Phone",
                 email: "Email",
                 office_hours: "Office Hours",
@@ -340,7 +394,60 @@ export const translations = {
                 styling: {
                     title: "ब्राइडल स्टाइलिंग",
                     desc: "सुर्खियां आपकी हैं। हमारे मशहूर मेकअप आर्टिस्ट और स्टाइलिस्ट यह सुनिश्चित करते हैं कि आप दीप्तिमान दिखें और आत्मविश्वास महसूस करें। हम एक ऐसा लुक बनाने के लिए परीक्षण और व्यक्तिगत परामर्श प्रदान करते हैं जो आपकी पोशाक और व्यक्तित्व को पूरा करता है।"
-                }
+                },
+                budget: {
+  title: "बजट प्रबंधन",
+  desc: "स्पष्टता के साथ भव्यता। हम आपकी शादी के बजट की सावधानीपूर्वक योजना और निगरानी करते हैं, ताकि हर खर्च समझदारी से और शानदार तरीके से हो।"
+},
+vendor: {
+  title: "वेंडर प्रबंधन",
+  desc: "एक सोच, एक समन्वित टीम। फूलों से लेकर कलाकारों तक, हम सभी वेंडर्स का समन्वय, बातचीत और समय-सीमा का प्रबंधन करते हैं।"
+},
+invites: {
+  title: "विवाह निमंत्रण",
+  desc: "पहली छाप सबसे महत्वपूर्ण होती है। शाही कार्ड्स से लेकर आधुनिक डिजिटल निमंत्रण तक, हम आपकी कहानी को दर्शाने वाले आमंत्रण तैयार करते हैं।"
+},
+menuPlanning: {
+  title: "विवाह मेन्यू योजना",
+  desc: "हर स्वाद के लिए सोच-समझकर तैयार मेन्यू। हम हर कार्यक्रम के लिए पारंपरिक और आधुनिक व्यंजनों का संतुलित चयन करते हैं।"
+},
+rituals: {
+  title: "पारंपरिक समारोह",
+  desc: "परंपराओं का सम्मान, पूर्णता के साथ। मेहंदी से विदाई तक, हर रस्म को प्रामाणिकता और सुंदरता से सम्पन्न किया जाता है।"
+},
+coordination: {
+  title: "विवाह-दिवस समन्वय",
+  desc: "आप जश्न मनाइए, बाकी हम संभालेंगे। हमारी टीम पूरे दिन का संचालन, समय-सारिणी और व्यवस्थाएं सुचारु रूप से संभालती है।"
+},
+shopping: {
+  title: "व्यक्तिगत विवाह शॉपिंग",
+  desc: "आपके लिए चुनी गई शान। ब्राइडल लहंगे से लेकर ज्वेलरी और उपहारों तक, हम हर खरीदारी में विशेषज्ञ मार्गदर्शन देते हैं।"
+},
+entertainment: {
+  title: "मनोरंजन और प्रस्तुतियां",
+  desc: "ऐसे पल जो यादगार बन जाएं। लोक कलाकारों से लेकर लाइव बैंड और डीजे तक, हम हर आयोजन में जान डालते हैं।"
+},
+timeline: {
+  title: "कार्यक्रम समय-रेखा योजना",
+  desc: "सही समय पर सही पल। हम विस्तृत समय-रेखा बनाते हैं ताकि हर कार्यक्रम सहज और तनावमुक्त रहे।"
+},
+proposal: {
+  title: "प्रपोज़ल योजना",
+  desc: "क्योंकि हमेशा की शुरुआत खास होनी चाहिए। निजी से लेकर भव्य प्रपोज़ल तक, हम हर पल को जादुई बनाते हैं।"
+},
+transport: {
+  title: "परिवहन और लॉजिस्टिक्स",
+  desc: "शान और समयबद्धता के साथ आगमन। मेहमानों और कपल के लिए लक्ज़री ट्रांसपोर्ट की संपूर्ण व्यवस्था।"
+},
+destination: {
+  title: "लक्ज़री डेस्टिनेशन वेडिंग",
+  desc: "जहां चाहें, वहीं जश्न मनाइए। हम भव्य डेस्टिनेशन शादियों की पूरी योजना और संचालन करते हैं।"
+},
+prewedding: {
+  title: "प्री-वेडिंग फोटोग्राफी",
+  desc: "वचनों से पहले की कहानी। महलों से लेकर प्राकृतिक लोकेशन्स तक, हम आपकी केमिस्ट्री को खूबसूरती से कैद करते हैं।"
+}
+
             },
             inquire: "इसके बारे में पूछें",
             cta: {

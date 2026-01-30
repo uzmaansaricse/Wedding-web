@@ -121,7 +121,9 @@ const Contact = () => {
                                         <span className="material-symbols-outlined text-2xl mt-1">call</span>
                                         <div>
                                             <p className="text-sm uppercase tracking-widest opacity-70 mb-1">{t.contact.info.phone}</p>
-                                            <p className="text-xl font-serif">+91 98765 43210</p>
+                                            <p className="text-xl font-serif">+91 94141 47250</p>
+                                            <p className="text-xl font-serif">+91 99291 38577</p>
+
                                         </div>
                                     </div>
                                     <div className="flex items-start gap-4">

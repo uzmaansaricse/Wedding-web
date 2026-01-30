@@ -86,7 +86,7 @@ const Footer = () => {
         {/* BOTTOM BAR */}
         <div className="border-t border-white/10 mt-12 pt-4 text-center text-sm text-white/60">
           {t.footer.design_by}{" "}
-          <span className="text-[#D4AF37]">Tech Point</span>
+          <span className="text-[#D4AF37]"> MB Events & Catering Services</span>
         </div>
 
       </div>
