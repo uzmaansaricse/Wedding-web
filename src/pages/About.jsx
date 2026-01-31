@@ -37,12 +37,12 @@ const About = () => {
                     <div className="relative">
                         <div className="grid grid-cols-2 gap-6">
                             <img
-                                src="https://images.unsplash.com/photo-1583939003579-730e3918a45a?q=80&w=2574&auto=format&fit=crop"
+                                src="https://plus.unsplash.com/premium_photo-1661894693368-2dc6e9fcaed2?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTN8fG1hcndhcmklMjB3ZWRkaW5nfGVufDB8MXwwfHx8MA%3D%3D"
                                 alt="Royal Decor"
                                 className="w-full h-80 object-cover rounded-tr-[4rem] rounded-bl-[4rem] shadow-2xl mt-12 transform hover:-translate-y-2 transition-transform duration-500 border-2 border-primary/20"
                             />
                             <img
-                                src="https://images.unsplash.com/photo-1606216794074-735e91aa2c92?q=80&w=2574&auto=format&fit=crop"
+                                src="https://images.unsplash.com/photo-1740416331524-7d40b988223b?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fG1hcndhcmklMjB3ZWRkaW5nfGVufDB8MXwwfHx8MA%3D%3D"
                                 alt="Indian Bride"
                                 className="w-full h-80 object-cover rounded-tl-[4rem] rounded-br-[4rem] shadow-2xl -mt-12 transform hover:-translate-y-2 transition-transform duration-500 border-2 border-primary/20"
                             />

@@ -11,7 +11,7 @@ const Testimonials = () => {
             id: 1,
             title: "A Dream Destination Wedding",
             quote: "We were worried about managing a destination wedding from the US, but the team handled everything flawlessly. The decor at the Sangeet was exactly what I envisioned—vibrant and elegant.",
-            image: "https://lh3.googleusercontent.com/aida-public/AB6AXuARvvaDl8IUS0ohcyUvDmkCtNu_L2U4YDJg3myvYLONfP1OTd5skamiZH8Cvu2187z2vkZgNAsdJ-wG75cuCJiEOS0aJzZ99YG-Kc1N3E65MWkHOE10dJ-Rxld6qlD_nj5Yg6UeXZN1IpHuaQQRf9Tm8qM7j8Te3KyxGDPWFINbDQI7GwXENdSyQWXeU-p8gfqCAL4Cm8qEZBEK62VglSYtN6kiaHvMBTvXEM3acAiKkvEXx8L5onCGSIaOZX7kiCLJcyV3ru938Vp4",
+            image: "https://media.istockphoto.com/id/1314780540/photo/indian-traditional-wedding-ceremony-photography.webp?a=1&b=1&s=612x612&w=0&k=20&c=6IXyY17ba4WBS96lAIhNOfOAiuG-s-iFfOtyjjLCwEE=",
             name: "Priya & Arjun",
             location: "Udaipur",
             date: "Dec 2023",
