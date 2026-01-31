@@ -2,6 +2,12 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import FloatingHearts from '../components/ui/FloatingHearts';
 import { useLanguage } from '../context/LanguageContext';
+import serviceVenue from '../assets/images/home/service-venue.png';
+import serviceDecor from '../assets/images/home/service-decor.png';
+import serviceHospitality from '../assets/images/home/service-hospitality.png';
+import portfolioBride from '../assets/images/home/portfolio-bride.png';
+import portfolioDecor from '../assets/images/home/portfolio-decor.png';
+import portfolioCouple from '../assets/images/home/portfolio-couple.png';
 
 const ServiceSection = ({ id, number, title, description, images, isReversed, icon }) => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -62,9 +68,9 @@ const Services = () => {
       title: t.services.list.venues.title,
       description: t.services.list.venues.desc,
       images: [
-        'https://lh3.googleusercontent.com/aida-public/AB6AXuAJl2-AitfK0cw4zxudnCYbLgyI13sqwJGyP7n7mb5_7pEPmvGClTli1zx_gbOqddrcBifjqCdrA3iYYHkl6zeUh4Rrjaeqh2q3ZuoYr5ZZS--O0UGsa78GT3Mw1J4PaG2eTxNHN_o-bPG7of_SBDiYpPBIylodVSUGHam9seDJIJvVesyKC00d_9KiDl_wAPEep-0wMzUI04J93WHFhzacM8PxuiZ_PvZx-PxvLBvEnz4w39MoQYxN_N7SAvkzKE2nBDezgAlSeB7-',
-        'https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=1600&q=80',
-        'https://lh3.googleusercontent.com/aida-public/AB6AXuAtGYIce2Grnb5NWT01BYg0QBON2cisMXNkInaQaqQBdcJBb20wOUizoIGMQG-CwdP8PMNLCPO0hAVuOrGg_LMnBcKv7XoTpHZCXxPA3GKda7Desgyza-EZba0JFNZNGas379Cq7Clz_xPTCV5HL-E23PxnsURcGDgHOUKaZJ5ozwiWxi-JGk8gjCUBkJj2LvigzXNebEiwNQpmfp4Uu4QTiWbPBplF6GUcmXxqBDo-OKVX1-9RIrHajQPf0mT8naPP9zlpY_0i1Owj'
+        serviceVenue,
+        serviceDecor,
+        portfolioCouple
       ],
       icon: 'location_city',
       isReversed: false
@@ -76,9 +82,9 @@ const Services = () => {
       title: t.services.list.decor.title,
       description: t.services.list.decor.desc,
       images: [
-        'https://lh3.googleusercontent.com/aida-public/AB6AXuBiLtS26EHZZV2-hqCG3BWnwRnt-7CdbNPcW3zBmj25PhwD_AWvbsnhNI23zYe7bXn3yKGFu1-OL5iaIzK5nzOlK5X3gcldW8UdRwy9VTeQeGVfNChRYPQLpISI7EU0fvy-Vpq3YDG3K2Yqml74Dw2XT-HbTH6N9BwkDH1lOFcJ80SMoFt3N5k5jbmia5e63NqUIxn1Cfxyp7VNCjRHPq3B3B_f7UXPG7QNJ-kYOiluF0v93Am8A28af3tPUbMSDsYbemUfpkfYjZDv',
-        'https://images.unsplash.com/photo-1523438885200-e635ba2c371e?auto=format&fit=crop&w=1600&q=80',
-        'https://lh3.googleusercontent.com/aida-public/AB6AXuC37UkIP9MM0HTNvTayjym32plgkSV0goE_2dq96NdUzJW_Dcn10y3UmWTzv_4nl_mzwmaN8oyWhfmlK9YOSThjfk7loalUnuUzde8BgaS8UmKzTz9k3DZQkuv_jOMbABeVz9xgi4NeT5xDQRJ-j6Yctq134qskRgP7UFcT5L61J-OpXe_eTWwY8YHL8bKgdLSjeWUXpk7s_jz7UrMewOPXgXDLjuyWstlNaVAl_fErc8WhqcMP0zv9qIf-RioVHt7cUQB5BkZGN8gN'
+        serviceDecor,
+        serviceVenue,
+        portfolioDecor
       ],
       icon: 'local_florist',
       isReversed: true
@@ -90,9 +96,9 @@ const Services = () => {
       title: t.services.list.catering.title,
       description: t.services.list.catering.desc,
       images: [
-        'https://images.unsplash.com/photo-1555244162-803834f70033?auto=format&fit=crop&w=1600&q=80',
-        'https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?auto=format&fit=crop&w=1600&q=80',
-        'https://images.unsplash.com/photo-1606471191009-63994c53433b?auto=format&fit=crop&w=1600&q=80'
+        serviceHospitality,
+        serviceVenue,
+        portfolioDecor
       ],
       icon: 'restaurant_menu',
       isReversed: false
@@ -104,9 +110,9 @@ const Services = () => {
       title: t.services.list.cinematography.title,
       description: t.services.list.cinematography.desc,
       images: [
-        'https://lh3.googleusercontent.com/aida-public/AB6AXuAb8CBe_P5JhPEpje7a9kmty35VuMIgEOea_rO-uVJLPaHR8bN1wxbeXELmloWJcq6bXjCxytBeGR1gWmLMh-AZOWwPUfbuBbKu_7EcMB3lCJx7tr9JTT_aXAWMesUKhSTSMdfSgQNCK2TKzJ1qHgIXmS8WsC3Ea4AVSGaw7Ug-H27_lYi3kUY_m4D7MBj9mlmrN9wUMnRmGKPjiz9bIjb898DdDKxCX2aqkF4FkWinwIGF9-3u4sWojlrRYGHBwpHoW24SYisnCifJ',
-        'https://images.unsplash.com/photo-1520854221256-17451cc331bf?auto=format&fit=crop&w=1600&q=80',
-        'https://lh3.googleusercontent.com/aida-public/AB6AXuBdnCwpAwGrde1XjJpFG4dlhXwwTTdToUA94Fe2ujNMnaj2S6SjzUhDcME0aUlJcJojpk8JPsQgNL9XlDH9AdjoQnEhD9vuwRHZpc6BV7bCUCZJeBxBSmrha7ax8NvQ9ceFHnIuMh2M0eEo9A7DQLPF4y-Te-Mm6jMzD7UmA9X5xREdoBPP1Y4cGfkmyvk3wRODkvB41i2JWMfWi9iHWA-f-f5GKrIibZ3DPW5VA2pcAUXXuUvJMC3eb9mttUyEeElDvyoojz3y9ACq'
+        portfolioCouple,
+        portfolioBride,
+        serviceVenue
       ],
       icon: 'photo_camera',
       isReversed: true
@@ -118,9 +124,9 @@ const Services = () => {
       title: t.services.list.styling.title,
       description: t.services.list.styling.desc,
       images: [
-        'https://lh3.googleusercontent.com/aida-public/AB6AXuAPuKOPwfIh-yh5i3fqlGsEPD1EGYeS1ONtPsVnwSDWi3xkPiPLb5h3z8autxQ-NeF-gjJcDM1C6c2J9_9MIbPVrQmYaTUOpKZr-IKzg_fmsLfQYSTIo9ySz-bj8jDsLRn3rAkngMZVZruRFGN1Gng9WzMnGKOPifO0lNtMbA1B0Juvz6sf5Xd6CelsWziwVs3SiYN5AsmYiIT18BtlxX6BaR6ZBkc9VVq6M6Or8vF5vsbPvaX8PR9P21-UMAyaFkCgEvud5CNm3uXL',
-        'https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&w=1600&q=80',
-        'https://images.unsplash.com/photo-1487412947132-28c53bffa326?auto=format&fit=crop&w=1600&q=80'
+        portfolioBride,
+        portfolioDecor,
+        serviceVenue
       ],
       icon: 'brush',
       isReversed: false
@@ -132,9 +138,9 @@ const Services = () => {
       title: t.services.list.budget.title,
       description: t.services.list.budget.desc,
       images: [
-        'https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=1600&q=80',
-        'https://images.unsplash.com/photo-1604594849809-dfedbc827105?auto=format&fit=crop&w=1600&q=80',
-        'https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?auto=format&fit=crop&w=1600&q=80'
+        serviceVenue,
+        serviceDecor,
+        portfolioDecor
       ],
       icon: 'account_balance_wallet',
       isReversed: true
@@ -146,9 +152,9 @@ const Services = () => {
       title: t.services.list.vendor.title,
       description: t.services.list.vendor.desc,
       images: [
-        'https://images.unsplash.com/photo-1515169067865-5387ec356754?auto=format&fit=crop&w=1600&q=80',
-        'https://images.unsplash.com/photo-1551836022-4c4c79ecde51?auto=format&fit=crop&w=1600&q=80',
-        'https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1600&q=80'
+        serviceHospitality,
+        serviceVenue,
+        portfolioDecor
       ],
       icon: 'groups',
       isReversed: false
@@ -160,9 +166,9 @@ const Services = () => {
       title: t.services.list.invites.title,
       description: t.services.list.invites.desc,
       images: [
-        'https://images.unsplash.com/photo-1526045431048-f857369baa09?auto=format&fit=crop&w=1600&q=80',
-        'https://images.unsplash.com/photo-1504198453319-5ce911bafcde?auto=format&fit=crop&w=1600&q=80',
-        'https://images.unsplash.com/photo-1520962917960-1d8a1f53c42b?auto=format&fit=crop&w=1600&q=80'
+        portfolioDecor,
+        portfolioBride,
+        serviceDecor
       ],
       icon: 'mail',
       isReversed: true
@@ -174,9 +180,9 @@ const Services = () => {
       title: t.services.list.entertainment.title,
       description: t.services.list.entertainment.desc,
       images: [
-        'https://images.unsplash.com/photo-1518972559570-7cc1309f3229?auto=format&fit=crop&w=1600&q=80',
-        'https://images.unsplash.com/photo-1506157786151-b8491531f063?auto=format&fit=crop&w=1600&q=80',
-        'https://images.unsplash.com/photo-1507874457470-272b3c8d8ee2?auto=format&fit=crop&w=1600&q=80'
+        serviceHospitality,
+        portfolioCouple,
+        serviceVenue
       ],
       icon: 'celebration',
       isReversed: false
@@ -188,9 +194,9 @@ const Services = () => {
       title: t.services.list.destination.title,
       description: t.services.list.destination.desc,
       images: [
-        'https://images.unsplash.com/photo-1506929562872-bb421503ef21?auto=format&fit=crop&w=1600&q=80',
-        'https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?auto=format&fit=crop&w=1600&q=80',
-        'https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1600&q=80'
+        serviceVenue,
+        portfolioCouple,
+        portfolioDecor
       ],
       icon: 'public',
       isReversed: true
@@ -202,9 +208,9 @@ const Services = () => {
       title: t.services.list.prewedding.title,
       description: t.services.list.prewedding.desc,
       images: [
-        'https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?auto=format&fit=crop&w=1600&q=80',
-        'https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?auto=format&fit=crop&w=1600&q=80',
-        'https://images.unsplash.com/photo-1495567720989-cebdbdd97913?auto=format&fit=crop&w=1600&q=80'
+        portfolioCouple,
+        portfolioBride,
+        serviceVenue
       ],
       icon: 'favorite',
       isReversed: false
@@ -216,9 +222,9 @@ const Services = () => {
       title: t.services.list.rituals.title,
       description: t.services.list.rituals.desc,
       images: [
-        'https://images.unsplash.com/photo-1600681703535-7a0e0f3c6e8a?auto=format&fit=crop&w=1600&q=80',
-        'https://images.unsplash.com/photo-1594736797933-d0d6a9f8d2de?auto=format&fit=crop&w=1600&q=80',
-        'https://images.unsplash.com/photo-1604578762246-41134f26c1ad?auto=format&fit=crop&w=1600&q=80'
+        portfolioBride,
+        portfolioDecor,
+        serviceDecor
       ],
       icon: 'auto_awesome',
       isReversed: true
@@ -230,9 +236,9 @@ const Services = () => {
       title: t.services.list.coordination.title,
       description: t.services.list.coordination.desc,
       images: [
-        'https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1600&q=80',
-        'https://images.unsplash.com/photo-1557804506-669a67965ba0?auto=format&fit=crop&w=1600&q=80',
-        'https://images.unsplash.com/photo-1515169067865-5387ec356754?auto=format&fit=crop&w=1600&q=80'
+        serviceHospitality,
+        serviceVenue,
+        portfolioCouple
       ],
       icon: 'event_available',
       isReversed: false
@@ -244,9 +250,9 @@ const Services = () => {
       title: t.services.list.shopping.title,
       description: t.services.list.shopping.desc,
       images: [
-        'https://images.unsplash.com/photo-1521334884684-d80222895322?auto=format&fit=crop&w=1600&q=80',
-        'https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=1600&q=80',
-        'https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?auto=format&fit=crop&w=1600&q=80'
+        portfolioBride,
+        portfolioDecor,
+        portfolioCouple
       ],
       icon: 'shopping_bag',
       isReversed: true
@@ -258,9 +264,9 @@ const Services = () => {
       title: t.services.list.timeline.title,
       description: t.services.list.timeline.desc,
       images: [
-        'https://images.unsplash.com/photo-1506784983877-45594efa4cbe?auto=format&fit=crop&w=1600&q=80',
-        'https://images.unsplash.com/photo-1518977956815-dee0062e3a38?auto=format&fit=crop&w=1600&q=80',
-        'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1600&q=80'
+        serviceVenue,
+        portfolioCouple,
+        serviceDecor
       ],
       icon: 'schedule',
       isReversed: false
@@ -272,9 +278,9 @@ const Services = () => {
       title: t.services.list.proposal.title,
       description: t.services.list.proposal.desc,
       images: [
-        'https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=1600&q=80',
-        'https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?auto=format&fit=crop&w=1600&q=80',
-        'https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?auto=format&fit=crop&w=1600&q=80'
+        portfolioCouple,
+        serviceVenue,
+        portfolioDecor
       ],
       icon: 'favorite_border',
       isReversed: true
@@ -286,9 +292,9 @@ const Services = () => {
       title: t.services.list.transport.title,
       description: t.services.list.transport.desc,
       images: [
-        'https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1600&q=80',
-        'https://images.unsplash.com/photo-1549921296-3cce4a4c35b3?auto=format&fit=crop&w=1600&q=80',
-        'https://images.unsplash.com/photo-1493238792000-8113da705763?auto=format&fit=crop&w=1600&q=80'
+        serviceVenue,
+        serviceDecor,
+        portfolioDecor
       ],
       icon: 'directions_car',
       isReversed: false
@@ -305,7 +311,7 @@ const Services = () => {
       <div className="relative w-full h-[60vh] flex items-center justify-center bg-black/50 overflow-hidden">
         <div
           className="absolute inset-0 w-full h-full bg-cover bg-center bg-no-repeat bg-fixed"
-          style={{ backgroundImage: 'url("https://images.unsplash.com/photo-1511795409834-ef04bbd61622?q=80&w=2669&auto=format&fit=crop")' }}
+          style={{ backgroundImage: `url(${serviceVenue})` }}
         >
           <div className="absolute inset-0 bg-black/40 backdrop-blur-[2px]"></div>
         </div>

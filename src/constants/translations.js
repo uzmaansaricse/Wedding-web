@@ -59,7 +59,7 @@ export const translations = {
                 badge: "Our Portfolio",
                 title: "Moments of Pure Joy",
                 desc: "Glimpses into the magical celebrations we've had the honor of crafting.",
-                cta: "View Full Gallery"
+                cta: "Book Now"
             },
             testimonials: {
                 badge: "Words of Love",

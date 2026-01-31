@@ -1,6 +1,13 @@
 import { Link } from 'react-router-dom';
 import FloatingHearts from '../components/ui/FloatingHearts';
 import { useLanguage } from '../context/LanguageContext';
+import serviceVenue from '../assets/images/home/service-venue.png';
+import serviceDecor from '../assets/images/home/service-decor.png';
+import serviceHospitality from '../assets/images/home/service-hospitality.png';
+import portfolioBride from '../assets/images/home/portfolio-bride.png';
+import portfolioDecor from '../assets/images/home/portfolio-decor.png';
+import portfolioCouple from '../assets/images/home/portfolio-couple.png';
+import portfolioCultural from '../assets/images/home/portfolio-cultural.png';
 
 const Home = () => {
     const { t } = useLanguage();
@@ -10,19 +17,19 @@ const Home = () => {
         {
             title: t.home.services.venue.title,
             icon: 'castle',
-            img: 'https://images.unsplash.com/photo-1520854221256-17451cc331bf?auto=format&fit=crop&w=1600&q=80',
+            img: serviceVenue,
             desc: t.home.services.venue.desc
         },
         {
             title: t.home.services.decor.title,
             icon: 'yard',
-            img: 'https://images.unsplash.com/photo-1523438885200-e635ba2c371e?auto=format&fit=crop&w=1600&q=80',
+            img: serviceDecor,
             desc: t.home.services.decor.desc
         },
         {
             title: t.home.services.hospitality.title,
             icon: 'concierge',
-            img: 'https://images.unsplash.com/photo-1566737236500-c8ac43014a67?q=80&w=2670&auto=format&fit=crop',
+            img: serviceHospitality,
             desc: t.home.services.hospitality.desc
         },
     ];
@@ -133,25 +140,25 @@ const Home = () => {
 
                     <div className="grid grid-cols-2 md:grid-cols-4 gap-4 h-[600px] md:h-[800px]">
                         <div className="col-span-2 row-span-2 relative overflow-hidden rounded-sm group">
-                            <img src="https://images.unsplash.com/photo-1606216794074-735e91aa2c92?q=80&w=2574&auto=format&fit=crop" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" alt="Bride" />
+                            <img src={portfolioBride} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" alt="Bride" />
                             <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-all duration-500"></div>
                         </div>
                         <div className="col-span-1 row-span-1 relative overflow-hidden rounded-sm group">
-                            <img src="https://images.unsplash.com/photo-1583939003579-730e3918a45a?q=80&w=2574&auto=format&fit=crop" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" alt="Decor" />
+                            <img src={portfolioDecor} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" alt="Decor" />
                             <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-all duration-500"></div>
                         </div>
                         <div className="col-span-1 row-span-2 relative overflow-hidden rounded-sm group">
-                            <img src="https://images.unsplash.com/photo-1545231027-637d2f6210f8?q=80&w=2574&auto=format&fit=crop" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" alt="Couple" />
+                            <img src={portfolioCouple} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" alt="Couple" />
                             <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-all duration-500"></div>
                         </div>
                         <div className="col-span-1 row-span-1 relative overflow-hidden rounded-sm group">
-                            <img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&w=1600&q=80" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" alt="Flowers" />
+                            <img src={portfolioCultural} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" alt="Flowers" />
                             <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-all duration-500"></div>
                         </div>
                     </div>
 
                     <div className="text-center mt-12">
-                        <Link to="/portfolio" className="inline-block border border-accent text-accent hover:bg-accent hover:text-white transition-all px-10 py-3 uppercase tracking-widest text-sm font-bold">
+                        <Link to="/contact" className="inline-block border border-accent text-accent hover:bg-accent hover:text-white transition-all px-10 py-3 uppercase tracking-widest text-sm font-bold">
                             {t.home.portfolio.cta}
                         </Link>
                     </div>
