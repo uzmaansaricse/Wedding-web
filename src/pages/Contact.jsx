@@ -1,9 +1,12 @@
 import React from 'react';
 import FloatingHearts from '../components/ui/FloatingHearts';
 import { useLanguage } from '../context/LanguageContext';
+import emailjs from '@emailjs/browser';
+import { useRef } from 'react';
 
 const Contact = () => {
     const { t } = useLanguage();
+const formRef = useRef(null);
 
     const faqs = [
         {
@@ -19,6 +22,29 @@ const Contact = () => {
             answer: t.contact.faq.a3
         }
     ];
+
+    const sendEmail = (e) => {
+  e.preventDefault();
+
+  emailjs
+    .sendForm(
+      'service_30cmpd6',
+      'template_75bpbfj',
+      formRef.current,
+      'kH6H-ih3Ia-NGRrJY'
+    )
+    .then(
+      () => {
+        alert('Thank you! Your message has been sent.');
+        formRef.current.reset();
+      },
+      (error) => {
+        console.error(error);
+        alert('Something went wrong. Please try again.');
+      }
+    );
+};
+
 
     return (
         <div className="w-full relative bg-background-light">
@@ -53,59 +79,107 @@ const Contact = () => {
                                 <h2 className="text-4xl font-serif text-accent mb-4">{t.contact.form.title}</h2>
                                 <p className="text-gray-500 font-light text-lg">{t.contact.form.desc}</p>
                             </div>
-                            <form className="flex flex-col gap-6 bg-white p-8 md:p-10 shadow-2xl relative overflow-hidden">
-                                <div className="absolute top-0 left-0 w-1 h-full bg-primary"></div>
-                                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                                    <label className="flex flex-col flex-1 gap-2">
-                                        <span className="text-accent text-sm font-bold uppercase tracking-wide">{t.contact.form.full_name}</span>
-                                        <input className="w-full border-b border-gray-300 focus:border-primary outline-none py-2 bg-transparent transition-colors placeholder:font-light" placeholder="Enter your name" />
-                                    </label>
-                                    <label className="flex flex-col flex-1 gap-2">
-                                        <span className="text-accent text-sm font-bold uppercase tracking-wide">{t.contact.form.phone}</span>
-                                        <input className="w-full border-b border-gray-300 focus:border-primary outline-none py-2 bg-transparent transition-colors placeholder:font-light" placeholder="+91 98765 43210" />
-                                    </label>
-                                </div>
-                                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                                    <label className="flex flex-col flex-1 gap-2">
-                                        <span className="text-accent text-sm font-bold uppercase tracking-wide">{t.contact.form.email}</span>
-                                        <input className="w-full border-b border-gray-300 focus:border-primary outline-none py-2 bg-transparent transition-colors placeholder:font-light" placeholder="you@example.com" type="email" />
-                                    </label>
-                                    <label className="flex flex-col flex-1 gap-2">
-                                        <span className="text-accent text-sm font-bold uppercase tracking-wide">{t.contact.form.date}</span>
-                                        <input className="w-full border-b border-gray-300 focus:border-primary outline-none py-2 bg-transparent transition-colors placeholder:font-light" type="date" />
-                                    </label>
-                                </div>
-                                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                                    <label className="flex flex-col flex-1 gap-2">
-                                        <span className="text-accent text-sm font-bold uppercase tracking-wide">
-                                            {t.contact.form.budget}
-                                        </span>
-                                        <input
-                                            className="w-full border-b border-gray-300 focus:border-primary outline-none py-2 bg-transparent transition-colors placeholder:font-light"
-                                            placeholder="e.g. ₹25 Lakh or ₹1 Cr"
-                                            type="text"
-                                        />
-                                    </label>
-                                    <label className="flex flex-col flex-1 gap-2">
-                                        <span className="text-accent text-sm font-bold uppercase tracking-wide">
-                                            {t.contact.form.event_type}
-                                        </span>
-                                        <input
-                                            className="w-full border-b border-gray-300 focus:border-primary outline-none py-2 bg-transparent transition-colors placeholder:font-light"
-                                            placeholder="Wedding / Engagement / Reception"
-                                            type="text"
-                                        />
-                                    </label>
+                            <form
+  ref={formRef}
+  onSubmit={sendEmail}
+  className="flex flex-col gap-6 bg-white p-8 md:p-10 shadow-2xl relative overflow-hidden"
+>
+  <div className="absolute top-0 left-0 w-1 h-full bg-primary"></div>
 
-                                </div>
-                                <label className="flex flex-col flex-1 gap-2">
-                                    <span className="text-accent text-sm font-bold uppercase tracking-wide">{t.contact.form.message}</span>
-                                    <textarea className="w-full border-b border-gray-300 focus:border-primary outline-none py-2 bg-transparent transition-colors min-h-[100px] placeholder:font-light" placeholder={t.contact.form.message_placeholder}></textarea>
-                                </label>
-                                <button className="self-start mt-4 px-10 py-3 bg-accent text-white font-bold uppercase tracking-widest hover:bg-white hover:text-accent border border-accent transition-all shadow-lg">
-                                    {t.contact.form.submit}
-                                </button>
-                            </form>
+  <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+    <label className="flex flex-col flex-1 gap-2">
+      <span className="text-accent text-sm font-bold uppercase tracking-wide">
+        {t.contact.form.full_name}
+      </span>
+      <input
+        name="full_name"
+        className="w-full border-b border-gray-300 focus:border-primary outline-none py-2 bg-transparent transition-colors placeholder:font-light"
+        placeholder="Enter your name"
+      />
+    </label>
+
+    <label className="flex flex-col flex-1 gap-2">
+      <span className="text-accent text-sm font-bold uppercase tracking-wide">
+        {t.contact.form.phone}
+      </span>
+      <input
+        name="phone"
+        className="w-full border-b border-gray-300 focus:border-primary outline-none py-2 bg-transparent transition-colors placeholder:font-light"
+        placeholder="+91 98765 43210"
+      />
+    </label>
+  </div>
+
+  <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+    <label className="flex flex-col flex-1 gap-2">
+      <span className="text-accent text-sm font-bold uppercase tracking-wide">
+        {t.contact.form.email}
+      </span>
+      <input
+        name="email"
+        type="email"
+        className="w-full border-b border-gray-300 focus:border-primary outline-none py-2 bg-transparent transition-colors placeholder:font-light"
+        placeholder="you@example.com"
+      />
+    </label>
+
+    <label className="flex flex-col flex-1 gap-2">
+      <span className="text-accent text-sm font-bold uppercase tracking-wide">
+        {t.contact.form.date}
+      </span>
+      <input
+        name="event_date"
+        type="date"
+        className="w-full border-b border-gray-300 focus:border-primary outline-none py-2 bg-transparent transition-colors placeholder:font-light"
+      />
+    </label>
+  </div>
+
+  <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+    <label className="flex flex-col flex-1 gap-2">
+      <span className="text-accent text-sm font-bold uppercase tracking-wide">
+        {t.contact.form.budget}
+      </span>
+      <input
+        name="budget"
+        type="text"
+        className="w-full border-b border-gray-300 focus:border-primary outline-none py-2 bg-transparent transition-colors placeholder:font-light"
+        placeholder="e.g. ₹25 Lakh or ₹1 Cr"
+      />
+    </label>
+
+    <label className="flex flex-col flex-1 gap-2">
+      <span className="text-accent text-sm font-bold uppercase tracking-wide">
+        {t.contact.form.event_type}
+      </span>
+      <input
+        name="event_type"
+        type="text"
+        className="w-full border-b border-gray-300 focus:border-primary outline-none py-2 bg-transparent transition-colors placeholder:font-light"
+        placeholder="Wedding / Engagement / Reception"
+      />
+    </label>
+  </div>
+
+  <label className="flex flex-col flex-1 gap-2">
+    <span className="text-accent text-sm font-bold uppercase tracking-wide">
+      {t.contact.form.message}
+    </span>
+    <textarea
+      name="message"
+      className="w-full border-b border-gray-300 focus:border-primary outline-none py-2 bg-transparent transition-colors min-h-[100px] placeholder:font-light"
+      placeholder={t.contact.form.message_placeholder}
+    />
+  </label>
+
+  <button
+    type="submit"
+    className="self-start mt-4 px-10 py-3 bg-accent text-white font-bold uppercase tracking-widest hover:bg-white hover:text-accent border border-accent transition-all shadow-lg"
+  >
+    {t.contact.form.submit}
+  </button>
+</form>
+
                         </div>
 
                         {/* Right Column: Contact Info & Map */}
