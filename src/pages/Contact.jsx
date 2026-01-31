@@ -144,7 +144,7 @@ const formRef = useRef(null);
         name="budget"
         type="text"
         className="w-full border-b border-gray-300 focus:border-primary outline-none py-2 bg-transparent transition-colors placeholder:font-light"
-        placeholder="e.g. ₹25 Lakh or ₹1 Cr"
+        placeholder="e.g. ₹5 Lakh "
       />
     </label>
 
@@ -195,8 +195,8 @@ const formRef = useRef(null);
                                         <span className="material-symbols-outlined text-2xl mt-1">call</span>
                                         <div>
                                             <p className="text-sm uppercase tracking-widest opacity-70 mb-1">{t.contact.info.phone}</p>
-                                            <p className="text-xl font-serif">+91 94141 47250</p>
-                                            <p className="text-xl font-serif">+91 99291 38577</p>
+                                            <p className="text-xl font-serif">Manoj Bajaj : +91 94141 47250</p>
+                                            <p className="text-xl font-serif">Ashok Malani : +91 99291 38577</p>
 
                                         </div>
                                     </div>
@@ -204,7 +204,7 @@ const formRef = useRef(null);
                                         <span className="material-symbols-outlined text-2xl mt-1">mail</span>
                                         <div>
                                             <p className="text-sm uppercase tracking-widest opacity-70 mb-1">{t.contact.info.email}</p>
-                                            <p className="text-xl font-serif">hello@shaadidreams.com</p>
+                                            <p className="text-xl font-serif">hello@marwadweddings.com</p>
                                         </div>
                                     </div>
                                     <div className="flex items-start gap-4">
