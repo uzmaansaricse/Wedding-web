@@ -20,7 +20,7 @@ const Footer = () => {
             <p className="text-sm leading-7 text-white/80">
               {t.footer.brand_desc}
             </p>
-            <span className="text-green-500 text-sm cursor-pointer">{t.footer.more}</span>
+            {/* <span className="text-green-500 text-sm cursor-pointer">{t.footer.more}</span> */}
           </div>
 
           {/* Column 2 */}
@@ -31,7 +31,7 @@ const Footer = () => {
             </h3>
             <div className="w-6 h-[1px] bg-white mx-auto mb-4" />
             <p className="text-sm text-white/80">
-              info@themarwadweddings.com
+              hello@marwadweddings.com
             </p>
           </div>
 
@@ -62,9 +62,9 @@ const Footer = () => {
               {t.footer.call_title}
             </h3>
             <div className="w-6 h-[1px] bg-white mx-auto mb-4" />
-            <p className="text-sm text-white/80">Mob: +91-9811045792</p>
-            <p className="text-sm text-white/80">+91 9871333339</p>
-            <p className="text-sm text-white/80">Tel: +91 11-40115879</p>
+            <p className="text-sm text-white/80">Manoj Bajaj : +91-9414147250</p>
+            
+            <p className="text-sm text-white/80">Ashok Malani : +91-9929138577</p>
           </div>
 
           {/* Column 5 */}
@@ -75,9 +75,9 @@ const Footer = () => {
             </h3>
             <div className="w-6 h-[1px] bg-white mx-auto mb-4" />
             <p className="text-sm text-white/80">
-              Unit No. 538, 6th Floor,<br />
-              Westend Mall, Janak Puri,<br />
-              New Delhi – 110058
+              Tehsil road, Nokha <br />
+           Bikaner, Rajsthan <br />
+              
             </p>
           </div>
 

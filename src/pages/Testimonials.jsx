@@ -113,54 +113,53 @@ const Testimonials = () => {
             </div>
 
             {/* Reviews Section */}
-          {/* Story Style Testimonials – Reduced Height */}
-<section className="bg-[#1a0b0b]">
-  {testimonials.map((testimonial, index) => {
-    const isReverse = index % 2 !== 0;
+            {/* Story Style Testimonials – Reduced Height */}
+            <section className="bg-[#1a0b0b]">
+                {testimonials.map((testimonial, index) => {
+                    const isReverse = index % 2 !== 0;
 
-    return (
-      <div
-        key={testimonial.id}
-        className="grid grid-cols-1 md:grid-cols-2 items-stretch"
-      >
-        {/* Image */}
-        <div className={`${isReverse ? 'md:order-2' : 'md:order-1'}`}>
-          <img
-            src={testimonial.image}
-            alt={testimonial.name}
-            className="w-full h-[320px] md:h-[420px] object-cover"
-          />
-        </div>
+                    return (
+                        <div
+                            key={testimonial.id}
+                            className="grid grid-cols-1 md:grid-cols-2 items-stretch"
+                        >
+                            {/* Image */}
+                            <div className={`${isReverse ? 'md:order-2' : 'md:order-1'}`}>
+                                <img
+                                    src={testimonial.image}
+                                    alt={testimonial.name}
+                                    className="w-full h-[320px] md:h-[420px] object-cover"
+                                />
+                            </div>
 
-        {/* Text */}
-        <div
-          className={`px-8 md:px-14 py-12 md:py-16 flex flex-col justify-center text-white ${
-            isReverse ? 'md:order-1' : 'md:order-2'
-          }`}
-        >
-          <h3 className="text-2xl md:text-3xl font-serif mb-4 text-[#d4af37]">
-            {testimonial.title}
-          </h3>
+                            {/* Text */}
+                            <div
+                                className={`px-8 md:px-14 py-12 md:py-16 flex flex-col justify-center text-white ${isReverse ? 'md:order-1' : 'md:order-2'
+                                    }`}
+                            >
+                                <h3 className="text-2xl md:text-3xl font-serif mb-4 text-[#d4af37]">
+                                    {testimonial.title}
+                                </h3>
 
-          <p className="text-base md:text-lg leading-relaxed mb-6 font-light italic text-white/80">
-            “{testimonial.quote}”
-          </p>
+                                <p className="text-base md:text-lg leading-relaxed mb-6 font-light italic text-white/80">
+                                    “{testimonial.quote}”
+                                </p>
 
-          <p className="font-serif text-lg text-[#d4af37]">
-            {testimonial.name}
-          </p>
-          <p className="text-xs uppercase tracking-widest opacity-70 mt-1">
-            {testimonial.location} • {testimonial.date}
-          </p>
-        </div>
-      </div>
-    );
-  })}
-</section>
+                                <p className="font-serif text-lg text-[#d4af37]">
+                                    {testimonial.name}
+                                </p>
+                                <p className="text-xs uppercase tracking-widest opacity-70 mt-1">
+                                    {testimonial.location} • {testimonial.date}
+                                </p>
+                            </div>
+                        </div>
+                    );
+                })}
+            </section>
 
 
             {/* Video Testimonials */}
-        
+
 
             {/* CTA Section */}
             <div className="py-24 bg-white relative overflow-hidden">

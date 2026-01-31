@@ -16,7 +16,7 @@ export const translations = {
             brand_desc: "The Marwad Weddings enters into the Indian wedding industry with a vision of luxury & elegance.",
             more: "More.",
             email_title: "Email Us",
-            call_title: "Call or Fax",
+            call_title: "Call",
             contact_title: "Contact Us",
             design_by: "Managed and Powered by"
         },
