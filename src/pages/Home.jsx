@@ -50,7 +50,7 @@ const Home = () => {
                         <Link to="/contact" className="bg-primary hover:bg-white hover:text-primary text-white text-lg font-bold uppercase tracking-wider px-10 py-4 rounded-none border border-primary transition-all duration-300 shadow-xl w-full md:w-auto">
                             {t.home.hero.cta_plan}
                         </Link>
-                        <Link to="/portfolio" className="group flex items-center gap-3 text-white text-lg font-medium tracking-wide hover:text-primary transition-colors cursor-pointer w-full md:w-auto justify-center">
+                        <Link to="/services" className="group flex items-center gap-3 text-white text-lg font-medium tracking-wide hover:text-primary transition-colors cursor-pointer w-full md:w-auto justify-center">
                             <span className="border-b border-white/50 group-hover:border-primary pb-1 transition-all">{t.home.hero.cta_portfolio}</span>
                             <span className="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
                         </Link>

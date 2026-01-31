@@ -113,82 +113,53 @@ const Testimonials = () => {
             </div>
 
             {/* Reviews Section */}
-          {/* Story Style Testimonials – Reduced Height */}
-<section className="bg-[#d6bcbc]">
-  {testimonials.map((testimonial, index) => {
-    const isReverse = index % 2 !== 0;
+            {/* Story Style Testimonials – Reduced Height */}
+            <section className="bg-[#1a0b0b]">
+                {testimonials.map((testimonial, index) => {
+                    const isReverse = index % 2 !== 0;
 
-    return (
-      <div
-        key={testimonial.id}
-        className="grid grid-cols-1 md:grid-cols-2 items-stretch"
-      >
-        {/* Image */}
-        <div className={`${isReverse ? 'md:order-2' : 'md:order-1'}`}>
-          <img
-            src={testimonial.image}
-            alt={testimonial.name}
-            className="w-full h-[320px] md:h-[420px] object-cover"
-          />
-        </div>
+                    return (
+                        <div
+                            key={testimonial.id}
+                            className="grid grid-cols-1 md:grid-cols-2 items-stretch"
+                        >
+                            {/* Image */}
+                            <div className={`${isReverse ? 'md:order-2' : 'md:order-1'}`}>
+                                <img
+                                    src={testimonial.image}
+                                    alt={testimonial.name}
+                                    className="w-full h-[320px] md:h-[420px] object-cover"
+                                />
+                            </div>
 
-        {/* Text */}
-        <div
-          className={`px-8 md:px-14 py-12 md:py-16 flex flex-col justify-center text-white ${
-            isReverse ? 'md:order-1' : 'md:order-2'
-          }`}
-        >
-          <h3 className="text-2xl md:text-3xl font-serif mb-4">
-            {testimonial.title}
-          </h3>
+                            {/* Text */}
+                            <div
+                                className={`px-8 md:px-14 py-12 md:py-16 flex flex-col justify-center text-white ${isReverse ? 'md:order-1' : 'md:order-2'
+                                    }`}
+                            >
+                                <h3 className="text-2xl md:text-3xl font-serif mb-4 text-[#d4af37]">
+                                    {testimonial.title}
+                                </h3>
 
-          <p className="text-base md:text-lg leading-relaxed mb-6 font-light italic">
-            “{testimonial.quote}”
-          </p>
+                                <p className="text-base md:text-lg leading-relaxed mb-6 font-light italic text-white/80">
+                                    “{testimonial.quote}”
+                                </p>
 
-          <p className="font-serif text-lg">
-            {testimonial.name}
-          </p>
-          <p className="text-xs uppercase tracking-widest opacity-80 mt-1">
-            {testimonial.location} • {testimonial.date}
-          </p>
-        </div>
-      </div>
-    );
-  })}
-</section>
+                                <p className="font-serif text-lg text-[#d4af37]">
+                                    {testimonial.name}
+                                </p>
+                                <p className="text-xs uppercase tracking-widest opacity-70 mt-1">
+                                    {testimonial.location} • {testimonial.date}
+                                </p>
+                            </div>
+                        </div>
+                    );
+                })}
+            </section>
+
 
             {/* Video Testimonials */}
-            <section className="bg-accent text-white py-24 relative z-10">
-                <div className="mx-auto max-w-[1200px] px-6">
-                    <div className="flex flex-col md:flex-row items-end justify-between mb-12 gap-6">
-                        <div>
-                            <span className="text-primary text-xs font-bold uppercase tracking-[0.2em] mb-4 block">{t.testimonials.videos.badge}</span>
-                            <h2 className="text-4xl md:text-5xl font-serif">{t.testimonials.videos.title}</h2>
-                        </div>
-                        <a href="#" className="flex items-center gap-2 text-white/70 hover:text-white transition-colors border-b border-white/30 pb-1">
-                            {t.testimonials.videos.link} <span className="material-symbols-outlined text-lg">open_in_new</span>
-                        </a>
-                    </div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                        {videos.map(video => (
-                            <div key={video.id} className="group relative aspect-video bg-black cursor-pointer overflow-hidden shadow-2xl border border-white/10">
-                                <img src={video.thumbnail} alt={video.title} className="w-full h-full object-cover opacity-70 group-hover:opacity-50 transition-opacity duration-500" />
-                                <div className="absolute inset-0 flex items-center justify-center">
-                                    <div className="w-16 h-16 rounded-full border-2 border-white flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                                        <span className="material-symbols-outlined text-4xl text-white">play_arrow</span>
-                                    </div>
-                                </div>
-                                <div className="absolute bottom-0 left-0 w-full p-6 bg-gradient-to-t from-black/90 to-transparent">
-                                    <h3 className="font-serif text-xl mb-1">{video.title}</h3>
-                                    <p className="text-xs uppercase tracking-widest text-white/60">{video.meta}</p>
-                                </div>
-                            </div>
-                        ))}
-                    </div>
-                </div>
-            </section>
 
             {/* CTA Section */}
             <div className="py-24 bg-white relative overflow-hidden">
