@@ -1,8 +1,8 @@
 export const translations = {
   en: {
     navbar: {
-      brand_name: "The Marwad Weddings",
-      brand_subtitle: "The Marwad Weddings",
+      brand_name: "M.B Event Management & Catering Service",
+      brand_subtitle: "M.B Event Management & Catering Service",
       home: "Home",
       about: "About",
       services: "Services",
@@ -12,9 +12,9 @@ export const translations = {
       switch_hi: "हिंदी"
     },
     footer: {
-      brand_name: "The Marwad Weddings",
+      brand_name: "M.B Event Management & Catering Service",
       brand_desc:
-        "The Marwad Weddings enters into the Indian wedding industry with a vision of luxury & elegance.",
+        "M.B Event Management & Catering Service enters into the Indian wedding industry with a vision of luxury & elegance.",
       more: "More.",
       email_title: "Email Us",
       call_title: "Call",
@@ -23,7 +23,7 @@ export const translations = {
     },
     home: {
       hero: {
-        badge: "The Marwad Wedding",
+        badge: "M.B Event Management & Catering Service",
         title_start: "Where Dreams Meet",
         title_royalty: "Royalty",
         subtitle:
@@ -37,7 +37,7 @@ export const translations = {
         title_start: "We don't just plan weddings;",
         title_end: "we orchestrate emotions.",
         desc:
-          "At The Marwad Wedding, we believe that true luxury lies in the details. From the delicate fragrance of fresh jasmine to the rhythmic beats of the dhol, we weave together the threads of tradition and modernity to create a tapestry of unforgettable moments.",
+          "At M.B Event Management & Catering Service, we believe that true luxury lies in the details. From the delicate fragrance of fresh jasmine to the rhythmic beats of the dhol, we weave together the threads of tradition and modernity to create a tapestry of unforgettable moments.",
         cta: "Read Our Story"
       },
       services: {
@@ -68,7 +68,7 @@ export const translations = {
       testimonials: {
         badge: "Words of Love",
         quote:
-          "\"The Marwad team didn't just plan our wedding; they created a fairytale. Every detail was executed with such precision and grace. We felt like royalty.\"",
+          "\"The M.B Event Management team didn't just plan our wedding; they created a fairytale. Every detail was executed with such precision and grace. We felt like royalty.\"",
         client: "Ananya & Rahul",
         location: "Jaipur, 2023"
       },
@@ -82,14 +82,14 @@ export const translations = {
     about: {
       hero: {
         badge: "Discover Our Story",
-        title: "About The Marwad"
+        title: "About M.B Events"
       },
       content: {
         est: "Est.",
         title: "Crafting Timeless Memories for",
         title_accent: "Generations",
         p1:
-          "At The Marwad Wedding, we believe that weddings are not just events; they are the beautiful beginning of a new legacy. Rooted in the rich traditions of Rajasthan and driven by modern elegance, we specialize in curating weddings that are as unique as your love story.",
+          "At M.B Event Management & Catering Service, we believe that weddings are not just events; they are the beautiful beginning of a new legacy. Rooted in the rich traditions of Rajasthan and driven by modern elegance, we specialize in curating weddings that are as unique as your love story.",
         p2:
           "Our journey began with a simple passion: to bring the grandeur of royal Indian hospitality to the forefront of modern wedding planning. From the palaces of Udaipur to the dunes of Jaisalmer, we turn your dream locations into magical settings.",
         stats: {
@@ -100,7 +100,7 @@ export const translations = {
       mission: {
         text:
           "\"Our mission is to translate your delicate emotions into a grand visual symphony.\"",
-        author: "— The Marwad Team"
+        author: "— M.B Event Management Team"
       }
     },
     services: {
@@ -236,7 +236,7 @@ export const translations = {
     },
     testimonials: {
       hero: {
-        badge: "Trusted by 500+ Couples",
+        badge: "Trusted by 100+ Couples",
         title: "Love Stories"
       },
       stats: {
@@ -344,8 +344,8 @@ export const translations = {
 
   hi: {
     navbar: {
-      brand_name: "द मारवाड़ वेडिंग्स",
-      brand_subtitle: "द मारवाड़ वेडिंग्स",
+      brand_name: "एम.बी इवेंट मैनेजमेंट एंड कैटरिंग सर्विस",
+      brand_subtitle: "एम.बी इवेंट मैनेजमेंट एंड कैटरिंग सर्विस",
       home: "होम",
       about: "हमारे बारे में",
       services: "सेवाएं",
@@ -355,9 +355,9 @@ export const translations = {
       switch_hi: "हिंदी"
     },
     footer: {
-      brand_name: "द मारवाड़ वेडिंग्स",
+      brand_name: "एम.बी इवेंट मैनेजमेंट एंड कैटरिंग सर्विस",
       brand_desc:
-        "द मारवाड़ वेडिंग्स विलासिता और भव्यता की दृष्टि के साथ भारतीय विवाह उद्योग में प्रवेश करता है।",
+        "एम.बी इवेंट मैनेजमेंट एंड कैटरिंग सर्विस विलासिता और भव्यता की दृष्टि के साथ भारतीय विवाह उद्योग में प्रवेश करता है।",
       more: "अधिक।",
       email_title: "ईमेल करें",
       call_title: "कॉल करें",
@@ -366,7 +366,7 @@ export const translations = {
     },
     home: {
       hero: {
-        badge: "द मारवाड़ वेडिंग्स",
+        badge: "एम.बी इवेंट मैनेजमेंट एंड कैटरिंग सर्विस",
         title_start: "जहां सपने मिलें",
         title_royalty: "राजसी ठाठ से",
         subtitle:
@@ -380,7 +380,7 @@ export const translations = {
         title_start: "हम सिर्फ शादियों की योजना नहीं बनाते;",
         title_end: "हम भावनाओं को सजाते हैं।",
         desc:
-          "द मारवाड़ वेडिंग्स में, हमारा मानना है कि असली विलासिता विवरण में है। ताजी चमेली की भीनी खुशबू से लेकर ढोल की थाप तक, हम परंपरा और आधुनिकता के धागों को बुनकर अविस्मरणीय पलों की एक तस्वीर बनाते हैं।",
+          "एम.बी इवेंट मैनेजमेंट एंड कैटरिंग सर्विस में, हमारा मानना है कि असली विलासिता विवरण में है। ताजी चमेली की भीनी खुशबू से लेकर ढोल की थाप तक, हम परंपरा और आधुनिकता के धागों को बुनकर अविस्मरणीय पलों की एक तस्वीर बनाते हैं।",
         cta: "हमारी कहानी पढ़ें"
       },
       services: {
@@ -411,7 +411,7 @@ export const translations = {
       testimonials: {
         badge: "प्यार के शब्द",
         quote:
-          "\"मारवाड़ टीम ने सिर्फ हमारी शादी की योजना नहीं बनाई; उन्होंने एक परीलोक बनाया। हर विवरण को इतनी सटीकता और अनुग्रह के साथ निष्पादित किया गया। हमें शाही महसूस हुआ।\"",
+          "\"एम.बी इवेंट टीम ने सिर्फ हमारी शादी की योजना नहीं बनाई; उन्होंने एक परीलोक बनाया। हर विवरण को इतनी सटीकता और अनुग्रह के साथ निष्पादित किया गया। हमें शाही महसूस हुआ।\"",
         client: "अनन्या और राहुल",
         location: "जयपुर, 2023"
       },
@@ -425,14 +425,14 @@ export const translations = {
     about: {
       hero: {
         badge: "हमारी कहानी जानें",
-        title: "द मारवाड़ के बारे में"
+        title: "एम.बी इवेंट्स के बारे में"
       },
       content: {
         est: "स्था.",
         title: "पीढ़ियों के लिए",
         title_accent: "अविस्मरणीय यादें बनाना",
         p1:
-          "द मारवाड़ वेडिंग्स में, हमारा मानना है कि शादियाँ सिर्फ कार्यक्रम नहीं हैं; वे एक नई विरासत की खूबसूरत शुरुआत हैं। राजस्थान की समृद्ध परंपराओं से जुड़े और आधुनिक विलासिता से प्रेरित, हम ऐसी शादियों को सजाने में माहिर हैं जो आपकी प्रेम कहानी जितनी ही अनोखी हैं।",
+          "एम.बी इवेंट मैनेजमेंट एंड कैटरिंग सर्विस में, हमारा मानना है कि शादियाँ सिर्फ कार्यक्रम नहीं हैं; वे एक नई विरासत की खूबसूरत शुरुआत हैं। राजस्थान की समृद्ध परंपराओं से जुड़े और आधुनिक विलासिता से प्रेरित, हम ऐसी शादियों को सजाने में माहिर हैं जो आपकी प्रेम कहानी जितनी ही अनोखी हैं।",
         p2:
           "हमारी यात्रा एक साधारण जुनून के साथ शुरू हुई: शाही भारतीय आतिथ्य की भव्यता को आधुनिक वेडिंग प्लानिंग के साथ लाना। उदयपुर के महलों से लेकर जैसलमेर के टीलों तक, हम आपके सपनों की जगहों को जादुई सेटिंग्स में बदल देते हैं।",
         stats: {
@@ -443,7 +443,7 @@ export const translations = {
       mission: {
         text:
           "\"हमारा मिशन आपकी नाजुक भावनाओं को एक भव्य दृश्य सिम्फनी में अनुवाद करना है।\"",
-        author: "— द मारवाड़ टीम"
+        author: "— एम.बी इवेंट मैनेजमेंट टीम"
       }
     },
     services: {

@@ -31,7 +31,7 @@ const Footer = () => {
             </h3>
             <div className="w-6 h-[1px] bg-white mx-auto mb-4" />
             <p className="text-sm text-white/80">
-              hello@marwadweddings.com
+              contact@mbeventmanagement.com
             </p>
           </div>
 
@@ -40,7 +40,7 @@ const Footer = () => {
             <div className="mx-auto w-20 h-20 border-2 border-[#D4AF37] rounded-full flex items-center justify-center mb-4 relative">
               <span className="absolute -top-3 text-[#D4AF37] text-sm">✦</span>
               <span className="text-[#D4AF37] text-2xl font-serif font-bold">
-                MW
+                MB
               </span>
             </div>
 
@@ -63,7 +63,7 @@ const Footer = () => {
             </h3>
             <div className="w-6 h-[1px] bg-white mx-auto mb-4" />
             <p className="text-sm text-white/80">Manoj Bajaj : +91-9414147250</p>
-            
+
             <p className="text-sm text-white/80">Ashok Malani : +91-9929138577</p>
           </div>
 
@@ -76,8 +76,8 @@ const Footer = () => {
             <div className="w-6 h-[1px] bg-white mx-auto mb-4" />
             <p className="text-sm text-white/80">
               Tehsil road, Nokha <br />
-           Bikaner, Rajsthan <br />
-              
+              Bikaner, Rajsthan <br />
+
             </p>
           </div>
 

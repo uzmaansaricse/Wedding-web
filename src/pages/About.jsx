@@ -90,7 +90,7 @@ const About = () => {
 
                         <div className="pt-4">
                             <img
-                                src="https://signature.freefire-name.com/img.php?f=7&t=The%20Marwad"
+                                src="https://signature.freefire-name.com/img.php?f=7&t=M.B%20Events"
                                 alt="Signature"
                                 className="h-12 opacity-60"
                             />

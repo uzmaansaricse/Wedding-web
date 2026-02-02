@@ -39,33 +39,50 @@ const Home = () => {
             <FloatingHearts />
 
             {/* Hero Section */}
-            <div className="relative flex min-h-[90vh] flex-col items-center justify-center gap-8 bg-cover bg-center bg-no-repeat bg-fixed p-8 text-center"
-                style={{ backgroundImage: 'linear-gradient(rgba(26, 11, 11, 0.4) 0%, rgba(26, 11, 11, 0.6) 100%), url("https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=2670&auto=format&fit=crop")' }}>
+            <div className="relative flex min-h-[100vh] flex-col items-center justify-center gap-8 p-8 text-center overflow-hidden">
 
-                <div className="flex flex-col gap-6 max-w-[900px] relative z-10 animate-fade-in-up">
-                    <span className="text-primary-dark uppercase tracking-[0.3em] text-sm md:text-base font-bold drop-shadow-sm bg-white/90 px-6 py-2 rounded-full inline-block mx-auto mb-4 backdrop-blur-sm border border-primary/20">
+                {/* Video Background */}
+                <div className="absolute inset-0 w-full h-full z-0 bg-black">
+                    <video
+                        autoPlay
+                        loop
+                        muted
+                        playsInline
+                        className="w-full h-full object-cover opacity-60"
+                        poster="https://images.unsplash.com/photo-1596395817838-3482386db8fe?q=80&w=2070&auto=format&fit=crop"
+                    >
+                        <source src="https://static.videezy.com/system/resources/previews/000/004/938/original/Golden_Particles_Falling.mp4" type="video/mp4" />
+                        Your browser does not support the video tag.
+                    </video>
+                    {/* Dark Overlay for Text Readability */}
+                    <div className="absolute inset-0 bg-black/40"></div>
+                    <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-transparent to-black/60"></div>
+                </div>
+
+                <div className="flex flex-col gap-6 max-w-[900px] relative z-10 animate-fade-in-up mt-20">
+                    <span className="text-white uppercase tracking-[0.3em] text-sm md:text-base font-bold drop-shadow-md border border-white/30 px-6 py-2 rounded-full inline-block mx-auto mb-4 bg-white/10 backdrop-blur-md">
                         {t.home.hero.badge}
                     </span>
                     <h1 className="text-white text-6xl md:text-8xl font-serif font-medium leading-tight drop-shadow-2xl">
-                        {t.home.hero.title_start} <br /> <span className="text-primary italic font-script pr-2">{t.home.hero.title_royalty}</span>
+                        {t.home.hero.title_start} <br /> <span className="text-[#D4AF37] italic font-script pr-2">{t.home.hero.title_royalty}</span>
                     </h1>
-                    <p className="text-gray-200 text-lg md:text-2xl font-light leading-relaxed max-w-2xl mx-auto drop-shadow-lg font-serif italic">
+                    <p className="text-gray-100 text-lg md:text-2xl font-light leading-relaxed max-w-2xl mx-auto drop-shadow-lg font-serif italic">
                         {t.home.hero.subtitle}
                     </p>
 
                     <div className="mt-8 flex flex-col md:flex-row gap-6 justify-center items-center">
-                        <Link to="/contact" className="bg-primary hover:bg-white hover:text-primary text-white text-lg font-bold uppercase tracking-wider px-10 py-4 rounded-none border border-primary transition-all duration-300 shadow-xl w-full md:w-auto">
+                        <Link to="/contact" className="bg-[#D4AF37] hover:bg-white hover:text-[#D4AF37] text-white text-lg font-bold uppercase tracking-wider px-12 py-4 rounded-full border border-[#D4AF37] transition-all duration-300 shadow-xl w-full md:w-auto transform hover:scale-105">
                             {t.home.hero.cta_plan}
                         </Link>
-                        <Link to="/services" className="group flex items-center gap-3 text-white text-lg font-medium tracking-wide hover:text-primary transition-colors cursor-pointer w-full md:w-auto justify-center">
-                            <span className="border-b border-white/50 group-hover:border-primary pb-1 transition-all">{t.home.hero.cta_portfolio}</span>
+                        <Link to="/services" className="group flex items-center gap-3 text-white text-lg font-medium tracking-wide hover:text-[#D4AF37] transition-colors cursor-pointer w-full md:w-auto justify-center">
+                            <span className="border-b border-white/50 group-hover:border-[#D4AF37] pb-1 transition-all">{t.home.hero.cta_portfolio}</span>
                             <span className="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
                         </Link>
                     </div>
                 </div>
 
                 {/* Scroll Down Indicator */}
-                <div className="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce text-white/50 flex flex-col items-center gap-2">
+                <div className="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce text-white/70 flex flex-col items-center gap-2 z-10">
                     <span className="text-xs uppercase tracking-widest">{t.home.hero.scroll}</span>
                     <span className="material-symbols-outlined">expand_more</span>
                 </div>

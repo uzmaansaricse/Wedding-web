@@ -33,7 +33,7 @@ const Navbar = () => {
             <div className="mx-auto w-20 h-20 border-2 border-[#D4AF37] rounded-full flex items-center justify-center mb-2 relative">
               <span className="absolute -top-3 text-[#D4AF37] text-sm">✦</span>
               <span className="text-[#D4AF37] text-2xl font-serif font-bold">
-                MW
+                MB
               </span>
             </div>
 
