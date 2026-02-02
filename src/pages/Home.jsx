@@ -8,9 +8,29 @@ import portfolioBride from '../assets/images/home/portfolio-bride.png';
 import portfolioDecor from '../assets/images/home/portfolio-decor.png';
 import portfolioCouple from '../assets/images/home/portfolio-couple.png';
 import portfolioCultural from '../assets/images/home/portfolio-cultural.png';
+import { useEffect, useState } from "react";
+
+
 
 const Home = () => {
     const { t } = useLanguage();
+
+    const testimonials = t.testimonials.items;
+
+const [activeIndex, setActiveIndex] = useState(0);
+const [paused, setPaused] = useState(false);
+
+useEffect(() => {
+  if (paused || testimonials.length <= 1) return;
+
+  const interval = setInterval(() => {
+    setActiveIndex((prev) =>
+      prev === testimonials.length - 1 ? 0 : prev + 1
+    );
+  }, 3000);
+
+  return () => clearInterval(interval);
+}, [paused, testimonials.length]);
 
     // Map services array using translations
     const services = [
@@ -183,28 +203,117 @@ const Home = () => {
             </section>
 
             {/* Testimonials Preview - Elegant Slider */}
-            <section className="py-24 bg-accent text-white relative z-10">
-                <div className="absolute top-0 right-0 p-12 opacity-5 text-9xl font-serif">"</div>
-                <div className="max-w-[1000px] mx-auto px-6 text-center relative">
-                    <span className="text-primary text-xs font-bold uppercase tracking-[0.2em] mb-8 block">{t.home.testimonials.badge}</span>
+<section className="py-24 text-white relative z-10 overflow-hidden group">
 
-                    <div className="relative">
-                        {/* Static Single Testimonial for Luxury Feel (Carousel logic can be complex without library) */}
-                        <div className="animate-fade-in-up">
-                            <p className="text-2xl md:text-4xl font-serif leading-normal italic text-white/90 mb-8">
-                                {t.home.testimonials.quote}
-                            </p>
-                            <div className="flex flex-col items-center">
-                                <div className="w-16 h-16 rounded-full border-2 border-primary p-1 mb-4">
-                                    <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAzHkqNv0rYwHrQ65Z9nRl6Ydpu6oeC3OS9gakdjM6QCdu_7O7c9nRlsLoMR7fFUOjVEU--LQitCpf4jKAJRt_eFaaT-qZe2THnfWUlhCSjlzAtKNybgsSrBhY96TEk8_YemjyN_CZGPU-1eLVy8xM8aTmbvUW4CGtcuECm01HLNvqa70t4lSw7n-Wl5Ydce1-TjMD6o9Q26-sTmFXvSWsXT4eiIMls19qMSPmj4Pc7sDAdhl82ek3woFfX56_y7787M-aAQibm3ka_" className="w-full h-full rounded-full object-cover" alt="Client" />
-                                </div>
-                                <h4 className="text-primary text-lg font-bold tracking-wide">{t.home.testimonials.client}</h4>
-                                <span className="text-white/50 text-sm">{t.home.testimonials.location}</span>
-                            </div>
-                        </div>
-                    </div>
+  {/* Soft luxury background */}
+  <div className="
+    absolute inset-0
+    bg-gradient-to-br
+    from-[#1c1a17]
+    via-[#26231d]
+    to-[#1c1a17]
+  "></div>
+
+  {/* Gentle warm glow */}
+  <div className="
+    absolute inset-0
+    bg-[radial-gradient(circle_at_center,rgba(212,175,55,0.12),transparent_65%)]
+  "></div>
+
+  {/* Subtle vignette for focus */}
+  <div className="
+    absolute inset-0
+    bg-gradient-to-r
+    from-black/30
+    via-transparent
+    to-black/30
+  "></div>
+
+  {/* Content */}
+  <div className="relative z-10">
+
+    {/* Minimal divider */}
+    <div className="w-12 h-[2px] bg-primary mx-auto mb-12 opacity-70"></div>
+
+    <div
+  className="relative overflow-hidden group"
+  onMouseEnter={() => setPaused(true)}
+  onMouseLeave={() => setPaused(false)}
+>
+{/* Top Left */}
+<div className="
+  cracker-burst
+  top-[15%] left-[10%]
+  group-hover:animate-[cracker-pop_650ms_ease-out]
+" 
+style={{ animationDelay: "0ms" }}
+/>
+
+{/* Top Right */}
+<div className="
+  cracker-burst
+  top-[15%] right-[10%]
+  group-hover:animate-[cracker-pop_650ms_ease-out]
+" 
+style={{ animationDelay: "300ms" }}
+/>
+
+{/* Bottom Left */}
+<div className="
+  cracker-burst
+  bottom-[15%] left-[10%]
+  group-hover:animate-[cracker-pop_650ms_ease-out]
+" 
+style={{ animationDelay: "600ms" }}/>
+
+{/* Bottom Right */}
+<div className="
+  cracker-burst
+  bottom-[15%] right-[10%]
+  group-hover:animate-[cracker-pop_650ms_ease-out]
+" 
+style={{ animationDelay: "900ms" }}/>
+
+
+        
+      <div
+        className="flex transition-transform duration-1000 ease-[cubic-bezier(0.22,1,0.36,1)]"
+        style={{ transform: `translateX(-${activeIndex * 100}%)` }}
+      >
+        {testimonials.map((item, index) => (
+          <div
+            key={index}
+            className="min-w-full flex justify-center px-4"
+          >
+            <div className="max-w-[680px] text-center">
+
+              <p className="text-xl md:text-3xl font-serif italic text-white/90 mb-8 leading-relaxed">
+                “{item.quote}”
+              </p>
+
+              <div className="flex flex-col items-center gap-1">
+                <div className="w-14 h-14 rounded-full border border-primary/60 p-1 mb-2">
+                  <div className="w-full h-full rounded-full bg-primary/15" />
                 </div>
-            </section>
+
+                <h4 className="text-primary text-sm font-semibold tracking-widest uppercase">
+                  {item.name}
+                </h4>
+                <span className="text-white/50 text-xs tracking-wide">
+                  {item.location} · {item.date}
+                </span>
+              </div>
+
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
 
             {/* CTA Section - Minimal */}
             <div className="py-32 bg-background-light relative overflow-hidden">

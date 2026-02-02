@@ -112,3 +112,53 @@ html {
     text-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
   }
 }
+@keyframes cracker-pop {
+  0% {
+    opacity: 0;
+    transform: scale(0.4);
+  }
+  20% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1.9);
+  }
+}
+
+.cracker-burst {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  border-radius: 999px;
+  background: #ffd700;
+  pointer-events: none;
+  opacity: 0;
+  animation-fill-mode: both;
+}
+
+/* Spark rays */
+.cracker-burst::before,
+.cracker-burst::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 999px;
+  background: transparent;
+  box-shadow:
+    0 -38px 0 1px #ffd700,
+    0 38px 0 1px #d4af37,
+    38px 0 0 1px #ffd700,
+    -38px 0 0 1px #c9a227,
+    28px 28px 0 1px #ffd700,
+    -28px 28px 0 1px #d4af37,
+    28px -28px 0 1px #c9a227,
+    -28px -28px 0 1px #ffd700;
+}
+
+/* Slight rotation difference */
+.cracker-burst::after {
+  transform: rotate(22deg);
+}
+
