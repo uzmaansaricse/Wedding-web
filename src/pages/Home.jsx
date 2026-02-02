@@ -112,22 +112,21 @@ const Home = () => {
             <div className="relative flex min-h-[100vh] flex-col items-center justify-center gap-8 p-8 text-center overflow-hidden">
 
                 {/* Video Background */}
-                <div className="absolute inset-0 w-full h-full z-0 bg-black">
-                    <video
-                        autoPlay
-                        loop
-                        muted
-                        playsInline
-                        className="w-full h-full object-cover opacity-60"
-                        poster="https://images.unsplash.com/photo-1596395817838-3482386db8fe?q=80&w=2070&auto=format&fit=crop"
-                    >
-                        <source src="https://static.videezy.com/system/resources/previews/000/004/938/original/Golden_Particles_Falling.mp4" type="video/mp4" />
-                        Your browser does not support the video tag.
-                    </video>
-                    {/* Dark Overlay for Text Readability */}
-                    <div className="absolute inset-0 bg-black/40"></div>
-                    <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-transparent to-black/60"></div>
-                </div>
+               <div className="absolute inset-0 w-full h-full z-0 overflow-hidden bg-black">
+ <iframe
+  className="absolute top-1/2 left-1/2 w-[177.77vh] h-[56.25vw] min-w-full min-h-full -translate-x-1/2 -translate-y-1/2 pointer-events-none"
+  src="https://www.youtube-nocookie.com/embed/-Rr7H-FHvI0?autoplay=1&mute=1&loop=1&controls=0&rel=0&playsinline=1&playlist=-Rr7H-FHvI0"
+  title="Background video"
+  frameBorder="0"
+  allow="autoplay; encrypted-media"
+></iframe>
+
+
+  {/* Dark overlays */}
+  <div className="absolute inset-0 bg-black/40"></div>
+  <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-transparent to-black/60"></div>
+</div>
+
 
                 <div className="flex flex-col gap-6 max-w-[900px] relative z-10 animate-fade-in-up mt-20">
                     <span className="text-white uppercase tracking-[0.3em] text-sm md:text-base font-bold drop-shadow-md border border-white/30 px-6 py-2 rounded-full inline-block mx-auto mb-4 bg-white/10 backdrop-blur-md">
