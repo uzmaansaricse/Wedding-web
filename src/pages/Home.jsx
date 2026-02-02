@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import { useRef, useState, useEffect } from 'react';
 import FloatingHearts from '../components/ui/FloatingHearts';
+import TestimonialCard from '../components/ui/TestimonialCard';
 import { useLanguage } from '../context/LanguageContext';
 import serviceVenue from '../assets/images/home/service-venue.png';
 import serviceDecor from '../assets/images/home/service-decor.png';
@@ -76,20 +77,7 @@ const Home = () => {
 
     const testimonials = t.testimonials.items;
 
-const [activeIndex, setActiveIndex] = useState(0);
-const [paused, setPaused] = useState(false);
 
-useEffect(() => {
-  if (paused || testimonials.length <= 1) return;
-
-  const interval = setInterval(() => {
-    setActiveIndex((prev) =>
-      prev === testimonials.length - 1 ? 0 : prev + 1
-    );
-  }, 3000);
-
-  return () => clearInterval(interval);
-}, [paused, testimonials.length]);
 
     // Map services array using translations
     // Full Services List for Marquee
@@ -209,14 +197,7 @@ useEffect(() => {
                                     <span>{t.home.philosophy.cta}</span>
                                     <span className="material-symbols-outlined text-lg group-hover:translate-x-1 transition-transform">arrow_forward</span>
                                 </Link>
-                                <div className="hidden md:flex items-center gap-4">
-                                    <div className="flex -space-x-4">
-                                        <div className="w-12 h-12 rounded-full border-2 border-white overflow-hidden"><img src={portfolioCouple} className="w-full h-full object-cover" /></div>
-                                        <div className="w-12 h-12 rounded-full border-2 border-white overflow-hidden"><img src={portfolioBride} className="w-full h-full object-cover" /></div>
-                                        <div className="w-12 h-12 rounded-full border-2 border-white bg-primary text-white flex items-center justify-center text-xs font-bold">+500</div>
-                                    </div>
-                                    <span className="text-sm font-serif italic text-gray-500">Happy Couples</span>
-                                </div>
+
                             </div>
                         </div>
 
@@ -386,116 +367,39 @@ useEffect(() => {
                 </div>
             </section>
 
-            {/* Testimonials Preview - Elegant Slider */}
-<section className="py-24 text-white relative z-10 overflow-hidden group">
+            {/* Testimonials Preview - Sliding Marquee */}
+            <section className="py-24 bg-background-light text-accent relative z-10 overflow-hidden">
+                {/* Subtle decorative background for light theme */}
+                <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cream-paper.png')] opacity-20"></div>
+                <div className="absolute inset-0 bg-gradient-to-br from-transparent via-[#F9F5F0]/50 to-transparent"></div>
 
-  {/* Soft luxury background */}
-  <div className="
-    absolute inset-0
-    bg-gradient-to-br
-    from-[#1c1a17]
-    via-[#26231d]
-    to-[#1c1a17]
-  "></div>
+                <div className="max-w-[1400px] mx-auto px-6 relative z-10">
+                    <div className="text-center mb-16">
+                        <span className="text-primary text-xs font-bold uppercase tracking-[0.2em] mb-2 block">{t.home.testimonials.badge}</span>
+                        <h2 className="text-4xl md:text-5xl font-serif text-accent mb-6">{t.home.testimonials.title}</h2>
+                    </div>
 
-  {/* Gentle warm glow */}
-  <div className="
-    absolute inset-0
-    bg-[radial-gradient(circle_at_center,rgba(212,175,55,0.12),transparent_65%)]
-  "></div>
-
-  {/* Subtle vignette for focus */}
-  <div className="
-    absolute inset-0
-    bg-gradient-to-r
-    from-black/30
-    via-transparent
-    to-black/30
-  "></div>
-
-  {/* Content */}
-  <div className="relative z-10">
-
-    {/* Minimal divider */}
-    <div className="w-12 h-[2px] bg-primary mx-auto mb-12 opacity-70"></div>
-
-    <div
-  className="relative overflow-hidden group"
-  onMouseEnter={() => setPaused(true)}
-  onMouseLeave={() => setPaused(false)}
->
-{/* Top Left */}
-<div className="
-  cracker-burst
-  top-[15%] left-[10%]
-  group-hover:animate-[cracker-pop_650ms_ease-out]
-" 
-style={{ animationDelay: "0ms" }}
-/>
-
-{/* Top Right */}
-<div className="
-  cracker-burst
-  top-[15%] right-[10%]
-  group-hover:animate-[cracker-pop_650ms_ease-out]
-" 
-style={{ animationDelay: "300ms" }}
-/>
-
-{/* Bottom Left */}
-<div className="
-  cracker-burst
-  bottom-[15%] left-[10%]
-  group-hover:animate-[cracker-pop_650ms_ease-out]
-" 
-style={{ animationDelay: "600ms" }}/>
-
-{/* Bottom Right */}
-<div className="
-  cracker-burst
-  bottom-[15%] right-[10%]
-  group-hover:animate-[cracker-pop_650ms_ease-out]
-" 
-style={{ animationDelay: "900ms" }}/>
-
-
-        
-      <div
-        className="flex transition-transform duration-1000 ease-[cubic-bezier(0.22,1,0.36,1)]"
-        style={{ transform: `translateX(-${activeIndex * 100}%)` }}
-      >
-        {testimonials.map((item, index) => (
-          <div
-            key={index}
-            className="min-w-full flex justify-center px-4"
-          >
-            <div className="max-w-[680px] text-center">
-
-              <p className="text-xl md:text-3xl font-serif italic text-white/90 mb-8 leading-relaxed">
-                “{item.quote}”
-              </p>
-
-              <div className="flex flex-col items-center gap-1">
-                <div className="w-14 h-14 rounded-full border border-primary/60 p-1 mb-2">
-                  <div className="w-full h-full rounded-full bg-primary/15" />
+                    <div
+                        className="w-full relative overflow-hidden"
+                        onMouseEnter={() => setIsPaused(true)}
+                        onMouseLeave={() => setIsPaused(false)}
+                        onTouchStart={() => setIsPaused(true)}
+                        onTouchEnd={() => setTimeout(() => setIsPaused(false), 2000)}
+                    >
+                        <div className={`flex w-max gap-8 animate-scroll ${isPaused ? 'pause' : ''}`}>
+                            {[...testimonials, ...testimonials, ...testimonials].map((item, index) => (
+                                <div key={index} className="w-[400px] flex-shrink-0">
+                                    <TestimonialCard
+                                        {...item}
+                                        stars={5}
+                                        image={[portfolioBride, portfolioCouple, portfolioCultural, serviceDecor][index % 4]}
+                                    />
+                                </div>
+                            ))}
+                        </div>
+                    </div>
                 </div>
-
-                <h4 className="text-primary text-sm font-semibold tracking-widest uppercase">
-                  {item.name}
-                </h4>
-                <span className="text-white/50 text-xs tracking-wide">
-                  {item.location} · {item.date}
-                </span>
-              </div>
-
-            </div>
-          </div>
-        ))}
-      </div>
-    </div>
-
-  </div>
-</section>
+            </section>
 
 
 
