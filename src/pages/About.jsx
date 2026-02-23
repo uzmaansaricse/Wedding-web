@@ -98,7 +98,7 @@ const About = () => {
             </div>
 
             {/* Vision / Mission */}
-            <div className="bg-[#1a0b0b] text-white py-24 relative overflow-hidden">
+            <div className="bg-[#d2a6a6] text-white py-24 relative overflow-hidden">
                 <div className="max-w-[1000px] mx-auto px-6 text-center relative z-10">
                     <span className="material-symbols-outlined text-6xl text-primary mb-8 opacity-80">
                         diamond
