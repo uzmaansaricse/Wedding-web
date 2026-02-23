@@ -1,8 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import FloatingHearts from '../components/ui/FloatingHearts';
+import { useLanguage } from '../context/LanguageContext';
 
 const Portfolio = () => {
+    const { t } = useLanguage();
     const portfolioItems = [
         {
             id: 1,
@@ -69,10 +70,10 @@ const Portfolio = () => {
 
                 <div className="relative z-10 text-center text-white px-4 animate-fade-in-up">
                     <span className="block text-primary text-sm md:text-base font-bold tracking-[0.3em] uppercase mb-4">
-                        Captured Moments
+                        {t.portfolio.hero.badge}
                     </span>
                     <h1 className="text-5xl md:text-7xl font-serif font-medium mb-6">
-                        Our Gallery
+                        {t.portfolio.hero.title}
                     </h1>
                     <div className="h-[2px] w-24 bg-primary mx-auto"></div>
                 </div>
@@ -110,12 +111,12 @@ const Portfolio = () => {
             <div className="py-24 bg-white border-t border-gray-100">
                 <div className="max-w-[800px] mx-auto px-6 text-center">
                     <span className="material-symbols-outlined text-4xl text-primary mb-6">camera_alt</span>
-                    <h2 className="text-3xl md:text-5xl font-serif text-accent mb-6">Let Us Tell Your Story</h2>
+                    <h2 className="text-3xl md:text-5xl font-serif text-accent mb-6">{t.portfolio.cta.title}</h2>
                     <p className="text-gray-500 text-lg mb-10 font-light">
-                        Every picture tells a story. Let us help you write yours with moments that you'll cherish forever.
+                        {t.home.cta_section.subtitle}
                     </p>
                     <Link to="/contact" className="inline-block bg-accent text-white hover:bg-primary transition-all px-10 py-3 text-sm font-bold uppercase tracking-widest">
-                        Book Photography
+                        {t.portfolio.cta.button}
                     </Link>
                 </div>
             </div>

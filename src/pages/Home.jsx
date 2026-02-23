@@ -71,34 +71,23 @@ const Home = () => {
     const stats = [
         { value: '10+', label: 'Years Experience' },
         { value: '100+', label: 'Happy Couples' },
-        { value: '50+', label: 'Luxury Venues' },
-        { value: '25+', label: 'Awards Won' },
+      
     ];
 
-    const testimonials = t.testimonials.items;
+    const testimonials = t.home.testimonials.items;
 
 
 
     // Map services array using translations
     // Full Services List for Marquee
     const services = [
-        { id: 'venues', number: '01', title: t.services.list.venues.title, description: t.services.list.venues.desc, image: serviceVenue, icon: 'castle' },
-        { id: 'decor', number: '02', title: t.services.list.decor.title, description: t.services.list.decor.desc, image: serviceDecor, icon: 'yard' },
-        { id: 'food', number: '03', title: t.services.list.catering.title, description: t.services.list.catering.desc, image: serviceHospitality, icon: 'restaurant_menu' },
-        { id: 'photography', number: '04', title: t.services.list.cinematography.title, description: t.services.list.cinematography.desc, image: portfolioCouple, icon: 'photo_camera' },
-        { id: 'makeup', number: '05', title: t.services.list.styling.title, description: t.services.list.styling.desc, image: portfolioBride, icon: 'brush' },
-        { id: 'budget', number: '06', title: t.services.list.budget.title, description: t.services.list.budget.desc, image: portfolioDecor, icon: 'account_balance_wallet' },
-        { id: 'vendor', number: '07', title: t.services.list.vendor.title, description: t.services.list.vendor.desc, image: serviceHospitality, icon: 'groups' },
-        { id: 'invites', number: '08', title: t.services.list.invites.title, description: t.services.list.invites.desc, image: serviceDecor, icon: 'mail' },
-        { id: 'entertainment', number: '09', title: t.services.list.entertainment.title, description: t.services.list.entertainment.desc, image: portfolioCultural, icon: 'celebration' },
-        { id: 'destination', number: '10', title: t.services.list.destination.title, description: t.services.list.destination.desc, image: serviceVenue, icon: 'public' },
-        { id: 'prewedding', number: '11', title: t.services.list.prewedding.title, description: t.services.list.prewedding.desc, image: portfolioCouple, icon: 'favorite' },
-        { id: 'rituals', number: '12', title: t.services.list.rituals.title, description: t.services.list.rituals.desc, image: portfolioDecor, icon: 'auto_awesome' },
-        { id: 'coordination', number: '13', title: t.services.list.coordination.title, description: t.services.list.coordination.desc, image: serviceHospitality, icon: 'event_available' },
-        { id: 'shopping', number: '14', title: t.services.list.shopping.title, description: t.services.list.shopping.desc, image: portfolioBride, icon: 'shopping_bag' },
-        { id: 'timeline', number: '15', title: t.services.list.timeline.title, description: t.services.list.timeline.desc, image: serviceVenue, icon: 'schedule' },
-        { id: 'proposal', number: '16', title: t.services.list.proposal.title, description: t.services.list.proposal.desc, image: portfolioCouple, icon: 'favorite_border' },
-        { id: 'transport', number: '17', title: t.services.list.transport.title, description: t.services.list.transport.desc, image: serviceDecor, icon: 'directions_car' }
+        { id: 'wedding', number: '01', title: t.services.list.wedding.title, description: t.services.list.wedding.desc, image: serviceVenue, icon: 'favorite' },
+        { id: 'catering', number: '02', title: t.services.list.catering.title, description: t.services.list.catering.desc, image: serviceHospitality, icon: 'restaurant_menu' },
+        { id: 'decor', number: '03', title: t.services.list.decor.title, description: t.services.list.decor.desc, image: serviceDecor, icon: 'yard' },
+        { id: 'ring_ceremony', number: '04', title: t.services.list.ring_ceremony.title, description: t.services.list.ring_ceremony.desc, image: serviceVenue, icon: 'diamond' },
+        { id: 'birthday', number: '05', title: t.services.list.birthday.title, description: t.services.list.birthday.desc, image: portfolioBride, icon: 'celebration' },
+        { id: 'anniversary', number: '06', title: t.services.list.anniversary.title, description: t.services.list.anniversary.desc, image: portfolioCouple, icon: 'auto_awesome' },
+        { id: 'celebrations', number: '07', title: t.services.list.celebrations.title, description: t.services.list.celebrations.desc, image: serviceDecor, icon: 'event' }
     ];
 
     // Duplicate for infinite scroll
@@ -112,49 +101,43 @@ const Home = () => {
             <div className="relative flex min-h-[100vh] flex-col items-center justify-center gap-8 p-8 text-center overflow-hidden">
 
                 {/* Video Background */}
-               <div className="absolute inset-0 w-full h-full z-0 overflow-hidden bg-black">
- <iframe
-  className="absolute top-1/2 left-1/2 w-[177.77vh] h-[56.25vw] min-w-full min-h-full -translate-x-1/2 -translate-y-1/2 pointer-events-none"
-  src="https://www.youtube-nocookie.com/embed/-Rr7H-FHvI0?autoplay=1&mute=1&loop=1&controls=0&rel=0&playsinline=1&playlist=-Rr7H-FHvI0"
-  title="Background video"
-  frameBorder="0"
-  allow="autoplay; encrypted-media"
-></iframe>
+                <div className="absolute inset-0 w-full h-full z-0 overflow-hidden bg-black">
+                    <iframe
+                        className="absolute top-1/2 left-1/2 w-[177.77vh] h-[56.25vw] min-w-full min-h-full -translate-x-1/2 -translate-y-1/2 pointer-events-none"
+                        src="https://www.youtube-nocookie.com/embed/-Rr7H-FHvI0?autoplay=1&mute=1&loop=1&controls=0&rel=0&playsinline=1&playlist=-Rr7H-FHvI0"
+                        title="Background video"
+                        frameBorder="0"
+                        allow="autoplay; encrypted-media"
+                    ></iframe>
 
 
-  {/* Dark overlays */}
-  <div className="absolute inset-0 bg-black/40"></div>
-  <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-transparent to-black/60"></div>
-</div>
+                    {/* Dark overlays */}
+                    <div className="absolute inset-0 bg-black/40"></div>
+                    <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-transparent to-black/60"></div>
+                </div>
 
 
                 <div className="flex flex-col gap-6 max-w-[900px] relative z-10 animate-fade-in-up mt-20">
-                    <span className="text-white uppercase tracking-[0.3em] text-sm md:text-base font-bold drop-shadow-md border border-white/30 px-6 py-2 rounded-full inline-block mx-auto mb-4 bg-white/10 backdrop-blur-md">
+                    <span className="text-white uppercase tracking-[0.2em] text-sm md:text-base font-bold drop-shadow-md px-6 py-2 rounded-full inline-block mx-auto mb-4 bg-primary/20 backdrop-blur-md">
                         {t.home.hero.badge}
                     </span>
-                    <h1 className="text-white text-6xl md:text-8xl font-serif font-medium leading-tight drop-shadow-2xl">
-                        {t.home.hero.title_start} <br /> <span className="text-[#D4AF37] italic font-script pr-2">{t.home.hero.title_royalty}</span>
+                    <h1 className="text-white text-6xl md:text-5xl font-serif font-medium leading-tight drop-shadow-2xl">
+                        {t.home.hero.title_start} <br /> <span className="text-primary italic font-script pr-2">{t.home.hero.title_royalty}</span>
                     </h1>
-                    <p className="text-gray-100 text-lg md:text-2xl font-light leading-relaxed max-w-2xl mx-auto drop-shadow-lg font-serif italic">
+                    <p className="text-gray-100 text-xl md:text-2xl font-light leading-relaxed max-w-2xl mx-auto drop-shadow-lg font-serif">
                         {t.home.hero.subtitle}
                     </p>
 
                     <div className="mt-8 flex flex-col md:flex-row gap-6 justify-center items-center">
-                        <Link to="/contact" className="bg-[#D4AF37] hover:bg-white hover:text-[#D4AF37] text-white text-lg font-bold uppercase tracking-wider px-12 py-4 rounded-full border border-[#D4AF37] transition-all duration-300 shadow-xl w-full md:w-auto transform hover:scale-105">
-                            {t.home.hero.cta_plan}
-                        </Link>
-                        <Link to="/services" className="group flex items-center gap-3 text-white text-lg font-medium tracking-wide hover:text-[#D4AF37] transition-colors cursor-pointer w-full md:w-auto justify-center">
-                            <span className="border-b border-white/50 group-hover:border-[#D4AF37] pb-1 transition-all">{t.home.hero.cta_portfolio}</span>
-                            <span className="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
-                        </Link>
+                        <a href="tel:9414147250" className="bg-primary hover:bg-white hover:text-primary text-white text-lg font-bold uppercase tracking-wider px-8 py-2 rounded-full border border-primary transition-all duration-300 shadow-xl w-full md:w-auto transform hover:scale-105 flex items-center justify-center gap-2">
+                            <span className="material-symbols-outlined">call</span>
+                            <span>{t.home.hero.cta_plan}</span>
+                        </a>
+                       
                     </div>
                 </div>
 
-                {/* Scroll Down Indicator */}
-                <div className="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce text-white/70 flex flex-col items-center gap-2 z-10">
-                    <span className="text-xs uppercase tracking-widest">{t.home.hero.scroll}</span>
-                    <span className="material-symbols-outlined">expand_more</span>
-                </div>
+            
             </div>
 
             {/* Brand Story Section - Split Layout */}
@@ -183,9 +166,9 @@ const Home = () => {
                                 <span className="w-8 h-[1px] bg-primary"></span>
                                 {t.home.philosophy.badge}
                             </span>
-                            <h2 className="text-5xl md:text-6xl font-serif text-accent mb-8 leading-tight">
+                            <h2 className="text-5xl md:text-4xl font-serif text-accent mb-8 leading-tight">
                                 {t.home.philosophy.title_start} <br />
-                                <span className="italic text-primary font-script text-6xl md:text-7xl">{t.home.philosophy.title_end}</span>
+                                <span className="italic text-primary font-script text-4xl md:text-4xl">{t.home.philosophy.title_end}</span>
                             </h2>
                             <p className="text-gray-600 text-lg leading-loose font-light mb-8 text-justify">
                                 {t.home.philosophy.desc}
@@ -219,84 +202,7 @@ const Home = () => {
                 </div>
             </section>
 
-            {/* Why Choose Us Section - Split Layout (Text Left, Image Right) */}
-            <section className="py-24 bg-background-light relative z-10">
-                <div className="max-w-[1400px] mx-auto px-6">
-                    <div className="flex flex-col lg:flex-row items-center gap-16">
-
-                        {/* Left Side - Content */}
-                        <div className="w-full lg:w-1/2 text-left animate-fade-in-up order-2 lg:order-1">
-                            <span className="text-primary text-sm font-bold uppercase tracking-[0.3em] mb-4 block flex items-center gap-2">
-                                <span className="w-8 h-[1px] bg-primary"></span>
-                                Why Choose Us
-                            </span>
-                            <h2 className="text-5xl md:text-6xl font-serif text-accent mb-8 leading-tight">
-                                Creating Timeless <br />
-                                <span className="italic text-primary font-script text-6xl md:text-7xl">Memories</span>
-                            </h2>
-                            <p className="text-gray-600 text-lg leading-loose font-light mb-8 text-justify">
-                                We prefer quality over quantity. Our team is dedicated to making your special day truly unforgettable with personalized attention to every detail. From royal decor to seamless execution, we ensure perfection.
-                            </p>
-
-                            <ul className="space-y-6 mb-10">
-                                <li className="flex items-start gap-4">
-                                    <span className="material-symbols-outlined text-primary text-2xl mt-1">verified</span>
-                                    <div>
-                                        <h4 className="text-xl font-serif text-accent font-bold">Files Personalized Approach</h4>
-                                        <p className="text-gray-500 font-light text-sm">Every wedding is unique, and so are our designs.</p>
-                                    </div>
-                                </li>
-                                <li className="flex items-start gap-4">
-                                    <span className="material-symbols-outlined text-primary text-2xl mt-1">groups</span>
-                                    <div>
-                                        <h4 className="text-xl font-serif text-accent font-bold">Experienced Team</h4>
-                                        <p className="text-gray-500 font-light text-sm">Over a decade of expertise in luxury events.</p>
-                                    </div>
-                                </li>
-                                <li className="flex items-start gap-4">
-                                    <span className="material-symbols-outlined text-primary text-2xl mt-1">diamond</span>
-                                    <div>
-                                        <h4 className="text-xl font-serif text-accent font-bold">Exclusive Vendors</h4>
-                                        <p className="text-gray-500 font-light text-sm">Access to the best artisans and venues in Rajasthan.</p>
-                                    </div>
-                                </li>
-                            </ul>
-
-                            <Link to="/contact" className="group inline-flex items-center gap-3 bg-accent text-white px-10 py-4 rounded-none text-sm font-bold uppercase tracking-widest hover:bg-primary transition-all duration-300">
-                                <span>Start Planning</span>
-                                <span className="material-symbols-outlined text-lg group-hover:translate-x-1 transition-transform">arrow_forward</span>
-                            </Link>
-                        </div>
-
-                        {/* Right Side - Image */}
-                        <div className="w-full lg:w-1/2 relative order-1 lg:order-2 p-8">
-                            {/* Offset decorative border */}
-                            <div className="absolute top-0 left-12 w-full h-full border-2 border-primary/30 rounded-t-full rounded-b-full -z-10 hidden md:block transform translate-x-4 translate-y-4"></div>
-
-                            <div className="relative h-[600px] w-full rounded-t-full rounded-b-full overflow-hidden border-8 border-white shadow-2xl shadow-primary/20">
-                                <img
-                                    src={portfolioBride}
-                                    alt="Why Choose Us"
-                                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
-                                />
-                                <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
-
-                                {/* Floating Badge */}
-                                <div className="absolute bottom-12 right-0 md:-right-6 bg-white/90 backdrop-blur-md p-6 rounded-none shadow-xl max-w-[200px] border-l-4 border-primary animate-fade-in-up">
-                                    <div className="flex items-center gap-2 mb-2">
-                                        <span className="material-symbols-outlined text-primary filled">verified</span>
-                                        <span className="text-xs font-bold uppercase tracking-wider text-accent">Premium Quality</span>
-                                    </div>
-                                    <p className="text-xs text-gray-500 font-light leading-relaxed">Recognized as the top wedding styling agency in Rajasthan.</p>
-                                </div>
-                            </div>
-                            {/* Decorative Element */}
-                            <div className="absolute -top-12 -right-12 w-48 h-48 bg-primary/5 rounded-full blur-3xl pointer-events-none"></div>
-                        </div>
-
-                    </div>
-                </div>
-            </section>
+         
 
             {/* Highlighted Services - Marquee Style */}
             <section className="py-24 bg-background-light relative z-10 overflow-hidden">
@@ -330,45 +236,10 @@ const Home = () => {
                 </div>
             </section>
 
-            {/* Gallery Preview - Masonry Style */}
-            <section className="py-24 bg-background-light relative z-10">
-                <div className="max-w-[1400px] mx-auto px-6">
-                    <div className="text-center mb-16">
-                        <span className="text-primary text-xs font-bold uppercase tracking-[0.2em] mb-2 block">{t.home.portfolio.badge}</span>
-                        <h2 className="text-4xl md:text-5xl font-serif text-accent mb-6">{t.home.portfolio.title}</h2>
-                        <p className="text-gray-500 text-lg font-light max-w-2xl mx-auto">{t.home.portfolio.desc}</p>
-                    </div>
 
-                    <div className="grid grid-cols-2 md:grid-cols-4 gap-4 h-[600px] md:h-[800px]">
-                        <div className="col-span-2 row-span-2 relative overflow-hidden rounded-sm group">
-                            <img src={portfolioBride} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" alt="Bride" />
-                            <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-all duration-500"></div>
-                        </div>
-                        <div className="col-span-1 row-span-1 relative overflow-hidden rounded-sm group">
-                            <img src={portfolioDecor} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" alt="Decor" />
-                            <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-all duration-500"></div>
-                        </div>
-                        <div className="col-span-1 row-span-2 relative overflow-hidden rounded-sm group">
-                            <img src={portfolioCouple} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" alt="Couple" />
-                            <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-all duration-500"></div>
-                        </div>
-                        <div className="col-span-1 row-span-1 relative overflow-hidden rounded-sm group">
-                            <img src={portfolioCultural} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" alt="Flowers" />
-                            <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-all duration-500"></div>
-                        </div>
-                    </div>
-
-                    <div className="text-center mt-12">
-                        <Link to="/contact" className="inline-block border border-accent text-accent hover:bg-accent hover:text-white transition-all px-10 py-3 uppercase tracking-widest text-sm font-bold">
-                            {t.home.portfolio.cta}
-                        </Link>
-                    </div>
-                </div>
-            </section>
-
-            {/* Testimonials Preview - Sliding Marquee */}
-            <section className="py-24 bg-background-light text-accent relative z-10 overflow-hidden">
-                {/* Subtle decorative background for light theme */}
+           
+            {/* <section className="py-24 bg-background-light text-accent relative z-10 overflow-hidden">
+               
                 <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cream-paper.png')] opacity-20"></div>
                 <div className="absolute inset-0 bg-gradient-to-br from-transparent via-[#F9F5F0]/50 to-transparent"></div>
 
@@ -398,21 +269,10 @@ const Home = () => {
                         </div>
                     </div>
                 </div>
-            </section>
+            </section> */}
 
 
 
-            {/* CTA Section - Minimal */}
-            <div className="py-32 bg-background-light relative overflow-hidden">
-                <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-20"></div>
-                <div className="max-w-[800px] mx-auto px-6 text-center relative z-10">
-                    <h2 className="text-5xl md:text-7xl font-serif text-accent mb-8">{t.home.cta_section.title}</h2>
-                    <p className="text-gray-500 text-lg mb-12 font-light">{t.home.cta_section.subtitle}</p>
-                    <Link to="/contact" className="bg-primary text-white hover:bg-primary-dark transition-all px-12 py-5 rounded-full text-lg font-bold uppercase tracking-wider shadow-xl shadow-primary/20">
-                        {t.home.cta_section.button}
-                    </Link>
-                </div>
-            </div>
 
         </div>
     );

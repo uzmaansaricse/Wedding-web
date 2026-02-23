@@ -1,7 +1,9 @@
 import React from 'react';
 import FloatingHearts from '../components/ui/FloatingHearts';
+import { useLanguage } from '../context/LanguageContext';
 
 const About = () => {
+    const { t } = useLanguage();
 
     return (
         <div className="w-full relative bg-background-light">
@@ -18,10 +20,10 @@ const About = () => {
 
                 <div className="relative z-10 text-center text-white px-4 animate-fade-in-up">
                     <span className="block text-primary text-sm md:text-base font-bold tracking-[0.3em] uppercase mb-4">
-                        ABOUT US
+                        {t.about.hero.badge}
                     </span>
                     <h1 className="text-5xl md:text-7xl font-serif font-medium mb-6">
-                        Celebrating Love, Within Your Budget
+                        {t.about.hero.title}
                     </h1>
                     <div className="h-[2px] w-24 bg-primary mx-auto"></div>
                 </div>
@@ -48,7 +50,7 @@ const About = () => {
 
                         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-32 h-32 border border-primary/30 rounded-full flex items-center justify-center bg-white/90 backdrop-blur shadow-lg">
                             <span className="text-4xl text-primary font-script">
-                                Est. 2014
+                                {t.about.content.est} 2014
                             </span>
                         </div>
                     </div>
@@ -57,33 +59,29 @@ const About = () => {
                     <div className="space-y-8">
                         <div>
                             <h2 className="text-3xl md:text-4xl font-serif text-[#181118] mb-6 leading-tight">
-                                10+ Years of Experience, <span className="text-primary italic">Endless Trust</span>
+                                {t.about.content.title} <span className="text-primary italic">{t.about.content.title_accent}</span>
                             </h2>
 
                             <p className="text-gray-600 text-lg leading-relaxed mb-6">
-                                For over a decade, we have been helping couples turn their wedding dreams into reality —
-                                without stretching their budget. We believe a beautiful wedding doesn’t have to be expensive,
-                                it just needs the right planning, honest guidance, and creative execution.
+                                {t.about.content.p1}
                             </p>
 
                             <p className="text-gray-600 text-lg leading-relaxed">
-                                From intimate ceremonies to grand celebrations, we specialize in delivering premium-quality
-                                services within limited budgets. Every detail is thoughtfully planned, every rupee is valued,
-                                and every celebration is handled with care — just like family.
+                                {t.about.content.p2}
                             </p>
                         </div>
 
                         <div className="grid grid-cols-2 gap-8 border-t border-gray-100 pt-8">
                             <div>
-                                <h3 className="text-4xl font-serif text-primary mb-2">100+</h3>
+                                <h3 className="text-4xl font-serif text-primary mb-2">{t.about.content.stats.weddings.count}</h3>
                                 <p className="text-sm uppercase tracking-wider text-gray-500 font-bold">
-                                    Weddings Planned
+                                    {t.about.content.stats.weddings.label}
                                 </p>
                             </div>
                             <div>
-                                <h3 className="text-4xl font-serif text-primary mb-2">10+ Years</h3>
+                                <h3 className="text-4xl font-serif text-primary mb-2">{t.about.content.stats.experience.count}</h3>
                                 <p className="text-sm uppercase tracking-wider text-gray-500 font-bold">
-                                    Experience
+                                    {t.about.content.stats.experience.label}
                                 </p>
                             </div>
                         </div>
@@ -105,12 +103,11 @@ const About = () => {
                     <span className="material-symbols-outlined text-6xl text-primary mb-8 opacity-80">
                         diamond
                     </span>
-                    <h2 className="text-3xl md:text-5xl font-serif mb-8 leading-tight">
-                        Our mission is simple — deliver the best wedding experience,
-                        no matter the budget, with honesty, creativity, and heart.
+                    <h2 className="text-2xl md:text-4xl font-serif mb-8 leading-tight italic">
+                        {t.about.mission.text}
                     </h2>
                     <p className="text-white/60 text-lg font-light tracking-wide">
-                        Because memories matter more than money.
+                        {t.about.mission.author}
                     </p>
                 </div>
             </div>

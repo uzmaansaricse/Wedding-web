@@ -14,7 +14,7 @@ const Footer = () => {
           <div>
             <Hourglass className="mx-auto mb-4" />
             <h3 className="uppercase tracking-widest text-sm mb-4">
-              {t.footer.brand_name}
+              {t.navbar.brand_name}
             </h3>
             <div className="w-6 h-[1px] bg-white mx-auto mb-4" />
             <p className="text-sm leading-7 text-white/80">
@@ -37,15 +37,15 @@ const Footer = () => {
 
           {/* Column 3 (CENTER LOGO) */}
           <div>
-            <div className="mx-auto w-20 h-20 border-2 border-[#D4AF37] rounded-full flex items-center justify-center mb-4 relative">
-              <span className="absolute -top-3 text-[#D4AF37] text-sm">✦</span>
-              <span className="text-[#D4AF37] text-2xl font-serif font-bold">
+            <div className="mx-auto w-20 h-20 border-2 border-primary rounded-full flex items-center justify-center mb-4 relative">
+              <span className="absolute -top-3 text-primary text-sm">✦</span>
+              <span className="text-primary text-2xl font-serif font-bold">
                 MB
               </span>
             </div>
 
-            <h2 className="text-[#D4AF37] text-sm tracking-widest uppercase mb-4">
-              {t.footer.brand_name}
+            <h2 className="text-primary text-xs tracking-widest uppercase mb-4">
+              {t.navbar.brand_subtitle}
             </h2>
 
             <div className="flex justify-center gap-4 text-xl">
@@ -71,7 +71,7 @@ const Footer = () => {
           <div>
             <Compass className="mx-auto mb-4" />
             <h3 className="uppercase tracking-widest text-sm mb-4">
-              {t.footer.contact_title}
+              {t.contact.info.location}
             </h3>
             <div className="w-6 h-[1px] bg-white mx-auto mb-4" />
             <p className="text-sm text-white/80">
@@ -85,8 +85,8 @@ const Footer = () => {
 
         {/* BOTTOM BAR */}
         <div className="border-t border-white/10 mt-12 pt-4 text-center text-sm text-white/60">
-          {t.footer.design_by}{" "}
-          <span className="text-[#D4AF37]"> MB Events & Catering Services</span>
+          {t.footer.rights}
+          <span className="text-primary"> MB Events & Catering Services</span>
         </div>
 
       </div>

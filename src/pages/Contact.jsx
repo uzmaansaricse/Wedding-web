@@ -144,7 +144,7 @@ const Contact = () => {
                       name="budget"
                       type="text"
                       className="w-full border-b border-gray-300 focus:border-primary outline-none py-2 bg-transparent transition-colors placeholder:font-light"
-                      placeholder="e.g. ₹5 Lakh "
+                      placeholder="e.g. ₹5-8 Lakh "
                     />
                   </label>
 
@@ -191,15 +191,25 @@ const Contact = () => {
                 </div>
                 <h3 className="text-3xl font-serif mb-8 relative z-10">{t.contact.info.title}</h3>
                 <div className="flex flex-col gap-8 relative z-10">
-                  <div className="flex items-start gap-4">
-                    <span className="material-symbols-outlined text-2xl mt-1">call</span>
-                    <div>
-                      <p className="text-sm uppercase tracking-widest opacity-70 mb-1">{t.contact.info.phone}</p>
-                      <p className="text-xl font-serif">Manoj Bajaj : +91 94141 47250</p>
-                      <p className="text-xl font-serif">Ashok Malani : +91 99291 38577</p>
-
+                  <a href="tel:9414147250" className="flex items-center gap-4 group">
+                    <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center group-hover:bg-primary group-hover:text-white transition-all">
+                      <span className="material-symbols-outlined">call</span>
                     </div>
-                  </div>
+                    <div>
+                      <p className="text-xs uppercase tracking-widest text-gray-500 font-bold mb-1">{t.contact.info.call}</p>
+                      <p className="text-lg font-serif text-accent">+91 94141 47250</p>
+                    </div>
+                  </a>
+
+                  <a href="https://wa.me/9414147250" target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 group">
+                    <div className="w-12 h-12 rounded-full bg-green-50 flex items-center justify-center group-hover:bg-green-600 group-hover:text-white transition-all">
+                      <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" className="w-6 h-6 grayscale group-hover:grayscale-0 group-hover:invert-0" alt="WhatsApp" />
+                    </div>
+                    <div>
+                      <p className="text-xs uppercase tracking-widest text-gray-500 font-bold mb-1">{t.contact.info.whatsapp}</p>
+                      <p className="text-lg font-serif text-accent">Chat on WhatsApp</p>
+                    </div>
+                  </a>
                   <div className="flex items-start gap-4">
                     <span className="material-symbols-outlined text-2xl mt-1">mail</span>
                     <div>
@@ -218,48 +228,37 @@ const Contact = () => {
               </div>
 
               {/* Location Card */}
-              <div className="bg-white p-2 shadow-xl">
-                <div className="h-[300px] w-full bg-gray-100 relative overflow-hidden group">
-                  <img
-                    className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700"
-                    alt="Map showing location in Bikaner"
-                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuDhj7NMkKpHcnZEK30qg81b6LIRtkpA4RUp8oz6-y3Hxhy6DB--dtRd1u0F3ubC6VDKSh2T-Ka4Vq5uSMfhzRyJatQIzYfOZzhIJhPbGelqhAI0Kharb2sH8-TUfEtCFUsOhWF9juDk-GWWDprLxNqgWuq9yDdZUK5XwcE5B1zzteehpQ70cphRqrk2nwaKRTe4r9YhaXmnUzdPdykjhxt7n8Fh31Q_-lsnmmtQpq3JdY1i5LBFHhNk-roZfh07p-te-sCM-Zlb16vz"
-                  />
-                  <div className="absolute inset-0 bg-primary/10 group-hover:bg-transparent transition-colors pointer-events-none"></div>
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="w-12 h-12 bg-accent rounded-full flex items-center justify-center animate-bounce shadow-lg">
-                      <span className="material-symbols-outlined text-white">location_on</span>
-                    </div>
-                  </div>
-                  <div className="absolute bottom-0 left-0 w-full bg-white/90 p-4">
-                    <h4 className="font-serif text-accent text-lg">{t.contact.info.studio}</h4>
-                    <p className="text-sm text-gray-500">Bikaner & Nokha, Rajasthan</p>
-                  </div>
-                </div>
-              </div>
+         {/* Location Card */}
+<div className="bg-white p-2 shadow-xl">
+  <div className="h-[300px] w-full bg-gray-100 relative overflow-hidden group">
+    
+    <iframe
+      src="https://www.google.com/maps?q=27.5548345,73.4771529&z=15&output=embed"
+      className="w-full h-full border-0"
+      allowFullScreen=""
+      loading="lazy"
+    ></iframe>
+
+    {/*  Optional: यदि आप location icon चाहते हैं */}
+    <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+      <div className="w-12 h-12 bg-accent rounded-full flex items-center justify-center animate-bounce shadow-lg">
+        <span className="material-symbols-outlined text-white">location_on</span>
+      </div>
+    </div>
+
+    <div className="absolute bottom-0 left-0 w-full bg-white/90 p-4">
+      <h4 className="font-serif text-accent text-lg">{t.contact.info.studio}</h4>
+      <p className="text-sm text-gray-500">
+        Tehsil Road, Nokha<br />
+        Bikaner, Rajasthan
+      </p>
+    </div>
+  </div>
+</div>
             </div>
           </div>
 
-          {/* FAQ Section */}
-          <div className="pt-16 border-t border-primary/10">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl font-serif text-accent mb-4">{t.contact.faq.title}</h2>
-              <p className="text-gray-500 font-light">{t.contact.faq.desc}</p>
-            </div>
-            <div className="max-w-3xl mx-auto flex flex-col gap-4">
-              {faqs.map((faq, i) => (
-                <details key={i} className="group bg-white p-6 shadow-sm border-l-2 border-transparent hover:border-primary transition-all cursor-pointer">
-                  <summary className="flex items-center justify-between text-lg font-serif text-accent list-none">
-                    {faq.question}
-                    <span className="material-symbols-outlined transition-transform duration-300 group-open:rotate-180 text-primary">expand_more</span>
-                  </summary>
-                  <div className="mt-4 text-gray-600 font-light leading-relaxed">
-                    {faq.answer}
-                  </div>
-                </details>
-              ))}
-            </div>
-          </div>
+      
         </div>
       </div>
     </div>

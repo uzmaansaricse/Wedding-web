@@ -69,11 +69,10 @@ const Testimonials = () => {
               </div>
 
               <div
-                className={`px-8 md:px-14 py-12 flex flex-col justify-center text-white ${
-                  reverse ? "md:order-1" : ""
-                }`}
+                className={`px-8 md:px-14 py-12 flex flex-col justify-center text-white ${reverse ? "md:order-1" : ""
+                  }`}
               >
-                <h3 className="text-2xl md:text-3xl font-serif text-[#d4af37] mb-4">
+                <h3 className="text-2xl md:text-3xl font-serif text-primary mb-4">
                   {item.title}
                 </h3>
 
@@ -81,7 +80,7 @@ const Testimonials = () => {
                   “{item.quote}”
                 </p>
 
-                <p className="font-serif text-[#d4af37]">
+                <p className="font-serif text-primary">
                   {item.name}
                 </p>
                 <p className="text-xs uppercase tracking-widest opacity-70">
@@ -93,29 +92,7 @@ const Testimonials = () => {
         })}
       </section>
 
-      {/* CTA */}
-      <div className="py-24 bg-white text-center">
-        <h2 className="text-4xl md:text-6xl font-serif text-accent mb-6">
-          {t.testimonials.cta.title}
-        </h2>
-        <p className="text-gray-500 mb-10">
-          {t.testimonials.cta.desc}
-        </p>
-        <div className="flex justify-center gap-4">
-          <Link
-            to="/contact"
-            className="bg-primary text-white px-10 py-4 font-bold uppercase"
-          >
-            {t.testimonials.cta.book_consult}
-          </Link>
-          <Link
-            to="/portfolio"
-            className="border border-accent text-accent px-10 py-4 font-bold uppercase"
-          >
-            {t.testimonials.cta.view_gallery}
-          </Link>
-        </div>
-      </div>
+      
     </div>
   );
 };

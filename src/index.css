@@ -4,15 +4,17 @@
 @import "tailwindcss";
 
 @theme {
-  --color-primary: #D4AF37;
-  /* Luxury Gold */
-  --color-primary-dark: #B5952F;
-  --color-accent: #1A0B0B;
-  /* Deep Royal Dark */
-  --color-background-light: #FFFCF8;
-  /* Soft Cream */
-  --color-background-dark: #1A0B0B;
-  --color-surface-light: #F9F5F0;
+  --color-primary: #f472b6;
+  /* Soft Rose Pink */
+  --color-primary-dark: #db2777;
+  /* Rose Pink Darker */
+  --color-accent: #3d2b24;
+  /* Warm Dark Brown (Softer than Black) */
+  --color-background-light: #fffaf0;
+  /* Floral White / Light Cream */
+  --color-background-dark: #1a0b0b;
+  --color-surface-light: #fdf5e6;
+  /* OldLace / Creamier Surface */
 
   --font-display: "Manrope", sans-serif;
   --font-serif: "Playfair Display", serif;
@@ -122,19 +124,23 @@ html {
   .text-shadow-md {
     text-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
   }
-   .pause {
+
+  .pause {
     animation-play-state: paused;
   }
 }
+
 @keyframes cracker-pop {
   0% {
     opacity: 0;
     transform: scale(0.4);
   }
+
   20% {
     opacity: 1;
     transform: scale(1);
   }
+
   100% {
     opacity: 0;
     transform: scale(1.9);
@@ -175,4 +181,3 @@ html {
 .cracker-burst::after {
   transform: rotate(22deg);
 }
-
