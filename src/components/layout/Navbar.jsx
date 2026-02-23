@@ -53,7 +53,7 @@ const Navbar = () => {
               <Link
                 key={link.name}
                 to={link.path}
-                className={`${isActive(link.path)} text-2xl font-serif  transition-colors`}
+                className={`${isActive(link.path)} text-2xl font-serif transition-colors`}
               >
                 {link.name}
               </Link>
@@ -89,11 +89,8 @@ const Navbar = () => {
 
         {/* ================= MOBILE HEADER ================= */}
         <div className="lg:hidden flex items-center justify-between py-4">
-          <Link to="/" className="flex items-center gap-2 text-primary">
-            <span className="material-symbols-outlined text-3xl">favorite</span>
-            <span className="text-2xl font-script tracking-wide">
-              {t.navbar.brand_name}
-            </span>
+          <Link to="/" className="text-primary text-2xl font-serif tracking-wide">
+            {t.navbar.brand_name}
           </Link>
 
           <button
@@ -110,16 +107,36 @@ const Navbar = () => {
       {/* ================= MOBILE MENU ================= */}
       {isMobileMenuOpen && (
         <div className="lg:hidden bg-white border-t border-black/10 px-6 py-6 flex flex-col gap-6 absolute w-full left-0 shadow-lg">
+
           {navLinks.map((link) => (
             <Link
               key={link.name}
               to={link.path}
-              className="text-primary text-2xl font-serif hover:text-primary transition-colors text-center"
+              className="text-primary text-2xl font-serif text-center hover:text-primary transition-colors"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               {link.name}
             </Link>
           ))}
+
+          {/* Language Switch for Mobile */}
+          <div className="flex justify-center pt-4">
+            <div className="text-primary flex gap-2 text-sm font-bold border border-primary/30 px-4 py-2 rounded-full">
+              <button
+                onClick={() => toggleLanguage('en')}
+                className={language === 'en' ? 'text-primary' : 'hover:opacity-80'}
+              >
+                {t.navbar.switch_en}
+              </button>
+              <span>|</span>
+              <button
+                onClick={() => toggleLanguage('hi')}
+                className={language === 'hi' ? 'text-primary' : 'hover:opacity-80'}
+              >
+                {t.navbar.switch_hi}
+              </button>
+            </div>
+          </div>
         </div>
       )}
     </header>

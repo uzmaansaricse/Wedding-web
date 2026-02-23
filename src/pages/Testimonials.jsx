@@ -52,7 +52,7 @@ const Testimonials = () => {
       </div>
 
       {/* Reviews – LANGUAGE BASED */}
-      <section className="bg-[#1a0b0b]">
+      <section className="bg-[#d2a6a6]">
         {t.testimonials.items.map((item, index) => {
           const reverse = index % 2 !== 0;
           return (
@@ -68,25 +68,27 @@ const Testimonials = () => {
                 />
               </div>
 
-              <div
-                className={`px-8 md:px-14 py-12 flex flex-col justify-center text-white ${reverse ? "md:order-1" : ""
-                  }`}
-              >
-                <h3 className="text-2xl md:text-3xl font-serif text-primary mb-4">
-                  {item.title}
-                </h3>
+             <div
+  className={`px-6 md:px-20 py-20 flex flex-col justify-center items-center text-center text-white ${
+    reverse ? "md:order-1" : ""
+  }`}
+>
+  <h3 className="text-3xl md:text-5xl font-serif mb-8">
+    {item.title}
+  </h3>
 
-                <p className="italic text-white/80 mb-6">
-                  “{item.quote}”
-                </p>
+  <p className="text-lg md:text-2xl leading-relaxed max-w-4xl font-serif opacity-90 mb-8">
+    {item.quote}
+  </p>
 
-                <p className="font-serif text-primary">
-                  {item.name}
-                </p>
-                <p className="text-xs uppercase tracking-widest opacity-70">
-                  {item.location} • {item.date}
-                </p>
-              </div>
+  <p className="text-lg md:text-xl font-serif italic">
+    – {item.name}
+  </p>
+
+  <p className="text-sm uppercase tracking-widest opacity-70 mt-2">
+    {item.location} • {item.date}
+  </p>
+</div>
             </div>
           );
         })}

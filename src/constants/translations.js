@@ -158,9 +158,9 @@ export const translations = {
         title: "Happy Client Reviews"
       },
       stats: {
-        events: { val: "500+", label: "Total Events" },
+        events: { val: "100+", label: "Total Events" },
         years: { val: "10+", label: "Years Experience" },
-        cities: { val: "15+", label: "Cities Served" }
+       
       },
       items: [
         {
