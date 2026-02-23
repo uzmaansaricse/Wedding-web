@@ -2,16 +2,20 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import FloatingHearts from '../components/ui/FloatingHearts';
 import { useLanguage } from '../context/LanguageContext';
+import img1 from '../assets/images/home/revimg6.jpg'
+import img2 from '../assets/images/home/revimg7.avif'
+import img3 from '../assets/images/home/revimg3.jpg'
+import img4 from '../assets/images/home/revimg4.avif'
 
 const Testimonials = () => {
   const { t } = useLanguage();
 
   // Images language-independent rahengi
   const testimonialImages = [
-    "https://plus.unsplash.com/premium_photo-1682092632793-c7d75b23718e?w=1600&auto=format&fit=crop&q=60",
-    "https://images.unsplash.com/photo-1738408993680-812d3937b7a2?w=1600&auto=format&fit=crop&q=60",
-    "https://images.unsplash.com/photo-1645856052472-95fe99103c11?w=1600&auto=format&fit=crop&q=60",
-    "https://images.unsplash.com/photo-1634992449982-2ca553fa118a?w=1600&auto=format&fit=crop&q=60"
+   img1,img2,img3,img4
+    // "https://images.unsplash.com/photo-1738408993680-812d3937b7a2?w=1600&auto=format&fit=crop&q=60",
+    // "https://images.unsplash.com/photo-1645856052472-95fe99103c11?w=1600&auto=format&fit=crop&q=60",
+    // "https://images.unsplash.com/photo-1634992449982-2ca553fa118a?w=1600&auto=format&fit=crop&q=60"
   ];
 
   return (
@@ -56,17 +60,17 @@ const Testimonials = () => {
         {t.testimonials.items.map((item, index) => {
           const reverse = index % 2 !== 0;
           return (
-            <div
-              key={index}
-              className="grid grid-cols-1 md:grid-cols-2"
-            >
-              <div className={reverse ? "md:order-2" : ""}>
-                <img
-                  src={testimonialImages[index % testimonialImages.length]}
-                  alt={item.name}
-                  className="w-full h-[320px] md:h-[420px] object-cover"
-                />
-              </div>
+           <div
+  key={index}
+  className="grid grid-cols-1 md:grid-cols-2 items-center"
+>
+  <div className={`${reverse ? "md:order-2" : ""} h-[350px] md:h-[450px] overflow-hidden`}>
+    <img
+      src={testimonialImages[index % testimonialImages.length]}
+      alt={item.name}
+      className="w-full h-full object-cover"
+    />
+  </div>
 
              <div
   className={`px-6 md:px-20 py-20 flex flex-col justify-center items-center text-center text-white ${
