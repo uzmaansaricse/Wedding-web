@@ -4,6 +4,21 @@ import FloatingHearts from '../components/ui/FloatingHearts';
 import { useLanguage } from '../context/LanguageContext';
 import serviceVenue from '../assets/images/home/service-venue.png';
 import serviceDecor from '../assets/images/home/service-decor.png';
+import ring1 from '../assets/images/home/ring1.jpg';
+import ring2 from '../assets/images/home/ring2.jpg';
+import ring3 from '../assets/images/home/ring3.jpg';
+import bday1 from '../assets/images/home/bday1.jpg';
+import bday2 from '../assets/images/home/bday2.jpg';
+import bday3 from '../assets/images/home/bday3.jpg';
+import venue1 from '../assets/images/home/venue1.jpg';
+import venue2 from '../assets/images/home/venue2.jpg';
+import venue3 from '../assets/images/home/venue3.jpg'; 
+import food1 from '../assets/images/home/food1.jpg';
+import food2 from '../assets/images/home/food2.jpeg';
+import food3 from '../assets/images/home/food4.jpg';
+import anni1 from '../assets/images/home/anni1.jpg';
+import anni2 from '../assets/images/home/anni2.jpg';
+import anni3 from '../assets/images/home/anni3.jpg';
 import serviceHospitality from '../assets/images/home/service-hospitality.png';
 import portfolioBride from '../assets/images/home/portfolio-bride.png';
 import portfolioDecor from '../assets/images/home/portfolio-decor.png';
@@ -91,13 +106,13 @@ const Services = () => {
 
   const servicesList = [
     { id: 'wedding', number: '01', title: t.services.list.wedding.title, description: t.services.list.wedding.desc, images: [serviceVenue, portfolioCouple, serviceDecor], icon: 'favorite' },
-    { id: 'catering', number: '02', title: t.services.list.catering.title, description: t.services.list.catering.desc, images: [serviceHospitality, serviceDecor, portfolioBride], icon: 'restaurant_menu' },
+    { id: 'catering', number: '02', title: t.services.list.catering.title, description: t.services.list.catering.desc, images: [food1,food2,food3], icon: 'restaurant_menu' },
     { id: 'decor', number: '03', title: t.services.list.decor.title, description: t.services.list.decor.desc, images: [serviceDecor, portfolioDecor, serviceVenue], icon: 'yard' },
-    { id: 'ring_ceremony', number: '04', title: t.services.list.ring_ceremony.title, description: t.services.list.ring_ceremony.desc, images: [serviceVenue, serviceDecor, portfolioCouple], icon: 'diamond' },
-    { id: 'birthday', number: '05', title: t.services.list.birthday.title, description: t.services.list.birthday.desc, images: [portfolioBride, portfolioDecor, serviceVenue], icon: 'celebration' },
-    { id: 'anniversary', number: '06', title: t.services.list.anniversary.title, description: t.services.list.anniversary.desc, images: [portfolioCouple, portfolioBride, serviceDecor], icon: 'auto_awesome' },
+    { id: 'ring_ceremony', number: '04', title: t.services.list.ring_ceremony.title, description: t.services.list.ring_ceremony.desc, images: [ring1,ring2,ring3], icon: 'diamond' },
+    { id: 'birthday', number: '05', title: t.services.list.birthday.title, description: t.services.list.birthday.desc, images: [bday1,bday2,bday3], icon: 'celebration' },
+    { id: 'anniversary', number: '06', title: t.services.list.anniversary.title, description: t.services.list.anniversary.desc, images: [anni1,anni2,anni3], icon: 'auto_awesome' },
     
-    { id: 'venues', number: '07', title: t.services.list.venues.title, description: t.services.list.venues.desc, images: [serviceVenue, portfolioDecor, serviceDecor], icon: 'apartment' },
+    { id: 'venues', number: '07', title: t.services.list.venues.title, description: t.services.list.venues.desc, images: [venue1,venue2,venue3], icon: 'apartment' },
   ];
 
   return (

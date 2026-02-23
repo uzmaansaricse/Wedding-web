@@ -10,7 +10,10 @@ import portfolioBride from '../assets/images/home/portfolio-bride.png';
 import portfolioDecor from '../assets/images/home/portfolio-decor.png';
 import portfolioCouple from '../assets/images/home/portfolio-couple.png';
 import portfolioCultural from '../assets/images/home/portfolio-cultural.png';
-
+import anni1 from '../assets/images/home/anni1.jpg'
+import food1 from '../assets/images/home/food4.jpg'
+import ring1 from '../assets/images/home/ring1.jpg'
+import bday1 from '../assets/images/home/bday1.jpg'
 
 
 // Service Card Component for Marquee
@@ -82,12 +85,12 @@ const Home = () => {
     // Full Services List for Marquee
     const services = [
         { id: 'wedding', number: '01', title: t.services.list.wedding.title, description: t.services.list.wedding.desc, image: serviceVenue, icon: 'favorite' },
-        { id: 'catering', number: '02', title: t.services.list.catering.title, description: t.services.list.catering.desc, image: serviceHospitality, icon: 'restaurant_menu' },
+        { id: 'catering', number: '02', title: t.services.list.catering.title, description: t.services.list.catering.desc, image: food1, icon: 'restaurant_menu' },
         { id: 'decor', number: '03', title: t.services.list.decor.title, description: t.services.list.decor.desc, image: serviceDecor, icon: 'yard' },
-        { id: 'ring_ceremony', number: '04', title: t.services.list.ring_ceremony.title, description: t.services.list.ring_ceremony.desc, image: serviceVenue, icon: 'diamond' },
-        { id: 'birthday', number: '05', title: t.services.list.birthday.title, description: t.services.list.birthday.desc, image: portfolioBride, icon: 'celebration' },
-        { id: 'anniversary', number: '06', title: t.services.list.anniversary.title, description: t.services.list.anniversary.desc, image: portfolioCouple, icon: 'auto_awesome' },
-        { id: 'celebrations', number: '07', title: t.services.list.celebrations.title, description: t.services.list.celebrations.desc, image: serviceDecor, icon: 'event' }
+        { id: 'ring_ceremony', number: '04', title: t.services.list.ring_ceremony.title, description: t.services.list.ring_ceremony.desc, image: ring1, icon: 'diamond' },
+        { id: 'birthday', number: '05', title: t.services.list.birthday.title, description: t.services.list.birthday.desc, image: bday1, icon: 'celebration' },
+        { id: 'anniversary', number: '06', title: t.services.list.anniversary.title, description: t.services.list.anniversary.desc, image: anni1, icon: 'auto_awesome' },
+        // { id: 'celebrations', number: '07', title: t.services.list.celebrations.title, description: t.services.list.celebrations.desc, image: serviceDecor, icon: 'event' }
     ];
 
     // Duplicate for infinite scroll
