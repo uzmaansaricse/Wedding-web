@@ -89,39 +89,17 @@ const Navbar = () => {
 
         {/* ================= MOBILE HEADER ================= */}
         <div className="lg:hidden flex items-center justify-between py-4">
-          <Link to="/" className="text-primary text-2xl font-serif tracking-wide">
+          
+          {/* Brand */}
+          <Link to="/" className="text-primary text-xl font-serif tracking-wide">
             {t.navbar.brand_name}
           </Link>
 
-          <button
-            className="text-primary"
-            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-          >
-            <span className="material-symbols-outlined text-3xl">
-              {isMobileMenuOpen ? 'close' : 'menu'}
-            </span>
-          </button>
-        </div>
-      </div>
+          {/* Right Side (Language + Menu) */}
+          <div className="flex items-center gap-3">
 
-      {/* ================= MOBILE MENU ================= */}
-      {isMobileMenuOpen && (
-        <div className="lg:hidden bg-white border-t border-black/10 px-6 py-6 flex flex-col gap-6 absolute w-full left-0 shadow-lg">
-
-          {navLinks.map((link) => (
-            <Link
-              key={link.name}
-              to={link.path}
-              className="text-primary text-2xl font-serif text-center hover:text-primary transition-colors"
-              onClick={() => setIsMobileMenuOpen(false)}
-            >
-              {link.name}
-            </Link>
-          ))}
-
-          {/* Language Switch for Mobile */}
-          <div className="flex justify-center pt-4">
-            <div className="text-primary flex gap-2 text-sm font-bold border border-primary/30 px-4 py-2 rounded-full">
+            {/* Language Switch */}
+            <div className="text-primary flex gap-1 text-xs font-bold border border-primary/30 px-3 py-1 rounded-full">
               <button
                 onClick={() => toggleLanguage('en')}
                 className={language === 'en' ? 'text-primary' : 'hover:opacity-80'}
@@ -136,7 +114,34 @@ const Navbar = () => {
                 {t.navbar.switch_hi}
               </button>
             </div>
+
+            {/* Menu Button */}
+            <button
+              className="text-primary"
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            >
+              <span className="material-symbols-outlined text-3xl">
+                {isMobileMenuOpen ? 'close' : 'menu'}
+              </span>
+            </button>
+
           </div>
+        </div>
+      </div>
+
+      {/* ================= MOBILE MENU ================= */}
+      {isMobileMenuOpen && (
+        <div className="lg:hidden bg-white border-t border-black/10 px-6 py-6 flex flex-col gap-6 absolute w-full left-0 shadow-lg">
+          {navLinks.map((link) => (
+            <Link
+              key={link.name}
+              to={link.path}
+              className="text-primary text-2xl font-serif text-center hover:text-primary transition-colors"
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              {link.name}
+            </Link>
+          ))}
         </div>
       )}
     </header>
