@@ -223,22 +223,22 @@ export const translations = {
     switch_hi: "हिंदी"
   },
   footer: {
-    brand_desc: "एम.बी इवेंट्स एंड कैटरिंग – बीकानेर और नोखा में शादी और हर छोटे-बड़े कार्यक्रम के लिए भरोसेमंद नाम। हम हर काम ऐसे करते हैं जैसे अपने घर का हो।",
+    brand_desc: "एम.बी इवेंट्स एंड कैटरिंग – बीकानेर और नोखा में शादी और हर छोटे-बड़े कार्यक्रम के लिए भरोसेमंद नाम। ",
     more: "और जानकारी",
     email_title: "ईमेल",
     call_title: "कॉल करें",
     address_title: "पता",
     quick_links: "जरूरी लिंक",
-    rights: "© 2024 एम.बी इवेंट्स। सभी अधिकार सुरक्षित।",
+    rights: "© 2024 एम.बी इवेंट्स।",
     design_by: "प्यार से तैयार किया गया -"
   },
 
   home: {
     hero: {
       badge: "10 साल से लोगों का भरोसा",
-      title_start: "आप बस बजट बताइए,",
+      title_start: "आप बजट बताइए,",
       title_royalty: "पूरा इंतज़ाम हम करेंगे",
-      subtitle: "जितना बजट, उतना बढ़िया काम। बिना टेंशन, बिना झंझट।",
+      subtitle: "",
       cta_plan: "अपना बजट बताएं",
       cta_portfolio: "हमारा काम देखें",
       scroll: "नीचे देखें"
@@ -248,15 +248,15 @@ export const translations = {
       badge: "10 साल से लोगों का भरोसा",
       title_start: "आप बजट बताइए,",
       title_end: "बाकी सब हमारा काम",
-      desc: "हर परिवार का अपना बजट होता है। हम उसी हिसाब से शादी, बर्थडे, सालगिरह, सगाई और बाकी सभी कार्यक्रम अच्छे तरीके से करते हैं। साफ काम, सही दाम।",
+      desc: " हम पिछले 10 वर्षों से शादी और विभिन्न कार्यक्रमों को सही बजट में सफलतापूर्वक आयोजित करते आ रहे हैं। आपके लिए आपका कार्यक्रम जितना खास है, हमारे लिए भी उतना ही महत्वपूर्ण है। हम हर छोटी-बड़ी बात का ध्यान रखते हैं ताकि आपको किसी भी तरह की परेशानी न हो। हम बीकानेर और नोखा के निवासी हैं, इसलिए यहाँ के रीति-रिवाज, परंपराएँ और लोगों की आवश्यकताओं को भली-भांति समझते हैं। शादी, बर्थडे पार्टी, एनिवर्सरी फंक्शन या रिंग सेरेमनी (सगाई) — सभी सेवाओं के लिए हमसे संपर्क करें।",
       cta: "और जानें"
     },
 
-    services: {
-      badge: "हमारी सेवाएं",
-      title: "हम क्या-क्या करते हैं",
-      view_all: "सभी सेवाएं देखें"
-    },
+     services: {
+        badge: "What We Do",
+        title: "Our Specialized Services",
+        view_all: "See All Services"
+      },
 
     testimonials: {
       badge: "खुश ग्राहक",
@@ -281,8 +281,9 @@ export const translations = {
       est: "स्था.",
       title: "बीकानेर और नोखा में",
       title_accent: "10 साल से सेवा में",
-      p1: "हम 10 साल से शादी और कार्यक्रम सही बजट में करवाते आ रहे हैं। आपका कार्यक्रम हमारे लिए खास है। हम पूरा ध्यान रखकर काम करते हैं ताकि आपको कोई परेशानी न हो।",
-      p2: "हम बीकानेर और नोखा के रहने वाले हैं। यहां के रीति-रिवाज और लोगों की जरूरत हमें अच्छे से पता है। खाना, स्टेज, लाइट और बाकी सब काम सही दाम में करते हैं।",
+      p1: "हम पिछले 10 वर्षों से शादी और विभिन्न कार्यक्रमों का सफलतापूर्वक आयोजन कर रहे हैं। हमारा उद्देश्य हर आयोजन को आपके बजट के अनुसार बेहतरीन तरीके से पूरा करना है। आपका कार्यक्रम हमारे लिए सिर्फ एक काम नहीं, बल्कि एक जिम्मेदारी और खास अवसर है। हम हर छोटी-बड़ी व्यवस्था पर पूरा ध्यान देते हैं, ताकि आपको किसी भी प्रकार की चिंता या परेशानी का सामना न करना पड़े और आप अपने खास दिन का आनंद ले सकें।",
+
+p2: "हम बीकानेर और नोखा के निवासी हैं, इसलिए यहाँ के रीति-रिवाज, परंपराएँ और लोगों की जरूरतों को अच्छी तरह समझते हैं। हम खाना, स्टेज सजावट, लाइटिंग, साउंड और अन्य सभी व्यवस्थाएँ उचित दाम में पूरी जिम्मेदारी के साथ उपलब्ध कराते हैं। हमारा प्रयास रहता है कि हर कार्यक्रम सुंदर, व्यवस्थित और यादगार बने।",
       stats: {
         weddings: { count: "100+", label: "कुल कार्यक्रम" },
         experience: { count: "10+", label: "साल का अनुभव" }
@@ -301,48 +302,40 @@ export const translations = {
       title: "हमारी सेवाएं"
     },
 
-    list: {
-      wedding: {
-        title: "पूरी शादी की तैयारी",
-        desc: "शादी की शुरुआत से लेकर आखिरी रस्म तक पूरा इंतज़ाम, आपके बजट में।"
+     list: {
+        wedding: {
+          title: "Complete Wedding Planning",
+          desc: "Full management of your wedding from start to finish, exactly in your budget."
+        },
+        catering: {
+          title: "Catering Service",
+          desc: "Fresh & delicious all types of food. We handle small to large gatherings."
+        },
+        decor: {
+          title: "Event Decoration",
+          desc: "Beautiful flower and light decor for all types of indoor and outdoor events."
+        },
+        ring_ceremony: {
+          title: "Ring Ceremony (Engagement)",
+          desc: "Elegant decoration and planning for your engagement ceremony."
+        },
+        birthday: {
+          title: "Birthday Party",
+          desc: "Fun and simple birthday planning for your children and loved ones."
+        },
+        anniversary: {
+          title: "Anniversary Function",
+          desc: "Heartfelt celebrations for your milestones with family and friends."
+        },
+        celebrations: {
+          title: "Other Celebrations",
+          desc: "We plan all types of events—Grah Pravesh, Baby Showers, and family functions."
+        },
+        venues: {
+          title: "Venue Selection",
+          desc: "Finding the right place that fits your budget and guest count."
+        }
       },
-
-      catering: {
-        title: "खाने की व्यवस्था",
-        desc: "ताज़ा और स्वादिष्ट खाना। छोटे से बड़े हर कार्यक्रम के लिए।"
-      },
-
-      decor: {
-        title: "स्टेज और जगह की तैयारी",
-        desc: "स्टेज, लाइट और बैठने की पूरी व्यवस्था। घर के अंदर और बाहर दोनों जगह।"
-      },
-
-      ring_ceremony: {
-        title: "सगाई कार्यक्रम",
-        desc: "सगाई के लिए पूरी तैयारी और सही इंतज़ाम।"
-      },
-
-      birthday: {
-        title: "बर्थडे कार्यक्रम",
-        desc: "बच्चों और बड़ों के लिए खुशियों भरा जन्मदिन कार्यक्रम।"
-      },
-
-      anniversary: {
-        title: "सालगिरह कार्यक्रम",
-        desc: "परिवार और दोस्तों के साथ खास दिन का अच्छा इंतज़ाम।"
-      },
-
-      celebrations: {
-        title: "अन्य कार्यक्रम",
-        desc: "गृह प्रवेश, बेबी शावर और हर पारिवारिक कार्यक्रम की व्यवस्था।"
-      },
-
-      venues: {
-        title: "जगह ढूंढने में मदद",
-        desc: "मेहमानों की संख्या और बजट के हिसाब से सही जगह चुनने में मदद।"
-      }
-    },
-
     intro: {
       title: "आपका कार्यक्रम, हमारी जिम्मेदारी",
       desc: "आप बस बताइए क्या चाहिए, बाकी सब हम संभाल लेंगे।"

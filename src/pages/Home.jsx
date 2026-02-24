@@ -73,7 +73,7 @@ const Home = () => {
 
     const stats = [
         { value: '10+', label: 'Years Experience' },
-        { value: '100+', label: 'Happy Couples' },
+        { value: '100+', label: 'Happy Events' },
       
     ];
 
@@ -131,13 +131,7 @@ const Home = () => {
                         {t.home.hero.subtitle}
                     </p>
 
-                    <div className="mt-8 flex flex-col md:flex-row gap-6 justify-center items-center">
-                        <a href="tel:9414147250" className="bg-primary hover:bg-white hover:text-primary text-white text-lg font-bold uppercase tracking-wider px-8 py-2 rounded-full border border-primary transition-all duration-300 shadow-xl w-full md:w-auto transform hover:scale-105 flex items-center justify-center gap-2">
-                            <span className="material-symbols-outlined">call</span>
-                            <span>{t.home.hero.cta_plan}</span>
-                        </a>
-                       
-                    </div>
+                   
                 </div>
 
             
